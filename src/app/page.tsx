@@ -119,9 +119,20 @@ export default function Home() {
 
       <section className="py-8 md:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-white">Films</h2>
-            <p className="text-cinema-muted mt-2">Selected film projects featuring original music composed by Colin McGinness</p>
+          <div className="mb-6 flex items-baseline justify-between">
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold text-white">Films</h2>
+              <p className="text-cinema-muted mt-2">Selected film projects featuring original music composed by Colin McGinness</p>
+            </div>
+            <Link
+              href="/film"
+              className="inline-flex items-center text-sm text-cinema-muted hover:text-cinema-accent transition-colors whitespace-nowrap ml-4"
+            >
+              View All
+              <svg className="w-3.5 h-3.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
           </div>
           <ScrollRail className="gap-4 md:gap-6 pb-4">
             {films.slice(0, 7).map((film) => (
@@ -130,17 +141,6 @@ export default function Home() {
               </div>
             ))}
           </ScrollRail>
-          <div className="mt-6 text-center">
-            <Link
-              href="/film"
-              className="inline-flex items-center text-white font-medium hover:text-cinema-accent transition-colors"
-            >
-              View All Films
-              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
-          </div>
         </div>
       </section>
 
