@@ -34,7 +34,7 @@ export const albumCovers: AlbumCover[] = [
   { src: "/images/album-covers/ctt107-menacing-atmospheres-cover.jpg", alt: "Album cover - Menacing Atmospheres", title: "Menacing Atmospheres" },
   { src: "/images/album-covers/ctt108-horror-cover.jpg", alt: "Album cover - Horror", title: "Horror" },
   { src: "/images/album-covers/dark-trailers.jpg", alt: "Album cover - Dark Trailers", title: "Dark Trailers" },
-  { src: "/images/album-covers/deep.jpg", alt: "Album cover - Deep", title: "Deep" },
+  { src: "/images/album-covers/deep.jpg", alt: "Album cover - Deep Thought", title: "Deep Thought" },
   { src: "/images/album-covers/delicate-nature.jpg", alt: "Album cover - Delicate Nature", title: "Delicate Nature" },
   { src: "/images/album-covers/essence-of-japan.jpg", alt: "Album cover - Essence Of Japan", title: "Essence Of Japan" },
   { src: "/images/album-covers/essential-utensils.png", alt: "Album cover - Essential Utensils", title: "Essential Utensils" },
