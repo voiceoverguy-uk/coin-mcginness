@@ -4,6 +4,7 @@ import SyncCard from '@/components/SyncCard'
 import FilmCard from '@/components/FilmCard'
 import AlbumCoversRail from '@/components/AlbumCoversRail'
 import TVSyncRail from '@/components/TVSyncRail'
+import HeroShowreel from '@/components/HeroShowreel'
 import { AwardCardSmall } from '@/components/AwardCard'
 import { featuredAwards } from '@/data/awards'
 import { films } from '@/data/films'
@@ -110,19 +111,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="order-1 lg:order-2" id="showreel">
-              <div className="relative rounded-xl overflow-hidden shadow-2xl shadow-black/50 border border-cinema-border">
-                <div className="aspect-video">
-                  <iframe
-                    src="https://www.youtube.com/embed/I0fR1Z1G0fs?rel=0"
-                    className="w-full h-full"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    title="Colin McGinness - Film Score Showreel"
-                  />
-                </div>
-              </div>
-            </div>
+            <HeroShowreel />
           </div>
         </div>
       </section>

@@ -39,7 +39,7 @@ export default function VideoCard({ title, description, youtubeUrl, aspectRatio 
         onClick={() => setIsPlaying(true)}
         aria-label={`Play ${title}`}
       >
-        <div className={aspectRatio === 'poster' ? 'aspect-[2/3]' : 'aspect-video'}>
+        <div className={`relative ${aspectRatio === 'poster' ? 'aspect-[2/3]' : 'aspect-video'}`}>
           <img
             src={thumbnail}
             alt={title}
@@ -49,14 +49,13 @@ export default function VideoCard({ title, description, youtubeUrl, aspectRatio 
               target.src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center transition-all duration-300 group-hover:bg-cinema-accent group-hover:scale-110">
               <Play className="w-6 h-6 text-white ml-1" fill="white" />
             </div>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 p-4">
+        <div className="p-3">
           <h3 className="text-white font-semibold text-sm md:text-base leading-tight">{title}</h3>
           {description && (
             <p className="text-cinema-muted text-xs md:text-sm mt-1 line-clamp-2">{description}</p>
