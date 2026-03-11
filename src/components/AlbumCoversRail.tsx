@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import { X } from 'lucide-react'
+import ScrollRail from '@/components/ScrollRail'
 import { albumCovers } from '@/data/albumCovers'
 import type { AlbumCover } from '@/data/albumCovers'
 
@@ -35,8 +36,8 @@ export default function AlbumCoversRail() {
 
   return (
     <>
-      <div className="pl-4 sm:pl-6 lg:pl-[max(1.5rem,calc((100vw-80rem)/2+1.5rem))]">
-        <div className="flex gap-4 overflow-x-auto pb-4 scroll-rail">
+      <div>
+        <ScrollRail className="gap-4 pb-4">
           {covers.map((cover, i) => (
             <button
               key={cover.src}
@@ -58,7 +59,7 @@ export default function AlbumCoversRail() {
               <p className="mt-2 px-1 text-cinema-muted text-xs leading-tight line-clamp-1 text-left">{cover.title}</p>
             </button>
           ))}
-        </div>
+        </ScrollRail>
       </div>
 
       {selected && (

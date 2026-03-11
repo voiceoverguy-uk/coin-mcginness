@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import { X } from 'lucide-react'
+import ScrollRail from '@/components/ScrollRail'
 import { tvSyncs } from '@/data/tvSyncs'
 import type { TVSync } from '@/data/tvSyncs'
 
@@ -35,8 +36,8 @@ export default function TVSyncRail() {
 
   return (
     <>
-      <div className="pl-4 sm:pl-6 lg:pl-[max(1.5rem,calc((100vw-80rem)/2+1.5rem))]">
-        <div className="flex gap-4 overflow-x-auto pb-4 scroll-rail">
+      <div>
+        <ScrollRail className="gap-4 pb-4">
           {syncs.map((sync, i) => (
             <button
               key={sync.src}
@@ -58,7 +59,7 @@ export default function TVSyncRail() {
               <p className="mt-2 px-1 text-cinema-muted text-xs leading-tight line-clamp-2 text-left">{sync.title}</p>
             </button>
           ))}
-        </div>
+        </ScrollRail>
       </div>
 
       {selected && (
