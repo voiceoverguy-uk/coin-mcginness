@@ -6,6 +6,7 @@ export interface Film {
   gallery: string[]
   description: string
   type: string
+  soundcloudEmbed?: string
 }
 
 export const films: Film[] = [
@@ -21,7 +22,8 @@ export const films: Film[] = [
       "/images/films/giorl-next-3.jpg"
     ],
     description: "Original score composed for this feature film. An award-winning production recognised at multiple international film festivals including Barcelona, Anatolia and Beyond the Curve.",
-    type: "Feature Film"
+    type: "Feature Film",
+    soundcloudEmbed: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A1516240744&color=%231b242d&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true"
   },
   {
     slug: "sacrilege",
@@ -86,7 +88,8 @@ export const films: Film[] = [
       "/images/films/DSOG.jpg"
     ],
     description: "Original score composed for this feature film. A dramatic exploration of society's hidden undercurrents.",
-    type: "Feature Film"
+    type: "Feature Film",
+    soundcloudEmbed: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A1667688787&color=%231c1c1c&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true"
   },
   {
     slug: "the-impact",
