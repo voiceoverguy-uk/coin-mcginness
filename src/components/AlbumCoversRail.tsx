@@ -41,7 +41,7 @@ export default function AlbumCoversRail() {
             <button
               key={cover.src}
               type="button"
-              className="flex-shrink-0 w-[160px] md:w-[180px] group focus:outline-none focus-visible:ring-2 focus-visible:ring-cinema-accent rounded-lg"
+              className="flex-shrink-0 w-[200px] sm:w-[220px] md:w-[260px] group focus:outline-none focus-visible:ring-2 focus-visible:ring-cinema-accent rounded-lg"
               onClick={() => setSelected(cover)}
               aria-label={`View ${cover.title}`}
             >
