@@ -183,9 +183,11 @@ export default function Home() {
             <h2 className="text-2xl md:text-3xl font-bold text-white">Feature Films</h2>
             <p className="text-cinema-muted mt-2">Selected film projects featuring original music composed by Colin McGinness</p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6">
+          <div className="flex gap-4 md:gap-6 overflow-x-auto pb-4 scroll-rail">
             {films.slice(0, 7).map((film) => (
-              <FilmCard key={film.slug} film={film} />
+              <div key={film.slug} className="flex-shrink-0 w-[140px] sm:w-[160px] md:w-[180px]">
+                <FilmCard film={film} />
+              </div>
             ))}
           </div>
           <div className="mt-8 text-center">
@@ -230,16 +232,12 @@ export default function Home() {
       <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div className="relative aspect-[4/5] rounded-xl overflow-hidden bg-gradient-to-br from-cinema-card via-cinema-border to-cinema-card flex items-center justify-center">
-              <div className="text-center p-8">
-                <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-cinema-border flex items-center justify-center">
-                  <svg className="w-10 h-10 text-cinema-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                  </svg>
-                </div>
-                <p className="text-sm text-cinema-muted uppercase tracking-wider">Colin Portrait</p>
-                <p className="text-xs text-cinema-muted mt-1">Placeholder</p>
-              </div>
+            <div className="relative aspect-[4/5] rounded-xl overflow-hidden">
+              <img
+                src="/images/colin-mcginness.jpg"
+                alt="Colin McGinness - Composer"
+                className="w-full h-full object-cover"
+              />
             </div>
             <div>
               <p className="text-cinema-accent font-medium tracking-widest uppercase text-sm mb-4">
