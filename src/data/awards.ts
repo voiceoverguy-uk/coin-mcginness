@@ -10,7 +10,7 @@ export interface Award {
 
 export const awards: Award[] = [
   {
-    image: "/images/awards/girl-next-film-festival-1.jpeg",
+    image: "/images/awards/girl-next-film-festival-1.jpg",
     title: "Best Music in a Film",
     result: "Winner",
     project: "Girl Next",
@@ -28,7 +28,7 @@ export const awards: Award[] = [
     category: "Best Original Score"
   },
   {
-    image: "/images/awards/anatolia-film-festival-2.jpeg",
+    image: "/images/awards/anatolia-film-festival-2.jpg",
     title: "Best Original Score",
     result: "Winner",
     project: "Girl Next",
@@ -37,7 +37,7 @@ export const awards: Award[] = [
     category: "Best Original Score"
   },
   {
-    image: "/images/awards/rts.jpeg",
+    image: "/images/awards/rts.jpg",
     title: "RTS West of England Awards",
     result: "Nominee",
     project: "Sacrilege",
@@ -55,7 +55,7 @@ export const awards: Award[] = [
     category: "Original Score"
   },
   {
-    image: "/images/awards/girl-next-award.jpeg",
+    image: "/images/awards/girl-next-award.jpg",
     title: "Festival Award",
     result: "Winner",
     project: "Girl Next",
@@ -64,7 +64,7 @@ export const awards: Award[] = [
     category: "Original Score"
   },
   {
-    image: "/images/awards/girl-next-film-festival-2.jpeg",
+    image: "/images/awards/girl-next-film-festival-2.jpg",
     title: "Festival Selection",
     result: "Official Selection",
     project: "Girl Next",
