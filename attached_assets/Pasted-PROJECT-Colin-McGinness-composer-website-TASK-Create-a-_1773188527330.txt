@@ -1,0 +1,103 @@
+PROJECT: Colin McGinness composer website
+
+TASK:
+Create a premium Awards & Recognition section on the homepage and a dedicated Awards page.
+
+GOAL:
+Display Colin McGinness’s awards, nominations and festival recognition in a cinematic, high-end way that matches the rest of the dark composer website.
+
+IMPORTANT:
+Do NOT make this feel like a cluttered image dump.
+Use a curated, elegant structure with hierarchy.
+
+HOMEPAGE REQUIREMENTS:
+
+Add a homepage section titled:
+Selected Awards & Recognition
+
+Add a short supporting line such as:
+Winner and nominee recognition for original score and composition in film and broadcast.
+
+Display 4 featured award cards maximum.
+Use a mix of:
+- strong award images
+- clean text overlays or captions
+
+Each card should include:
+- award/festival name
+- result (Winner / Nominee / Official Selection)
+- project title
+- year
+
+Use the strongest visual assets first.
+
+Suggested featured items:
+- Barcelona International Film Festival — Best Music in a Film — Girl Next
+- Beyond the Curve International Film Festival — Best Original Score — Girl Next
+- Anatolia International Film Festival — Best Original Score — Girl Next
+- RTS West of England Awards — Nominee, Composer — Sacrilege
+
+The homepage awards section should link to:
+/awards
+
+AWARDS PAGE REQUIREMENTS:
+
+Create a dedicated page:
+Awards
+
+Page structure:
+
+1. Hero section
+Headline:
+Awards & Recognition
+
+Subheading:
+Selected wins, nominations and festival recognition for Colin McGinness’s work in film and broadcast composition.
+
+2. Featured Wins
+Large premium cards for major award wins.
+
+3. Nominations
+Separate section for nominations and shortlist recognition.
+
+4. Festival Recognition
+A polished grid or rail for official selection / festival / laurel graphics.
+
+5. Optional gallery modal/lightbox
+When award images are clicked, open a larger modal with image + caption.
+
+DESIGN DIRECTION:
+- dark cinematic styling
+- elegant spacing
+- white text with gold or warm metallic accent
+- subtle shadows and borders
+- premium card layout
+- no clutter
+- no tiny unreadable thumbnails
+
+CONTENT MODEL:
+Create a clean data array for awards, for example:
+- image
+- title
+- result
+- project
+- festival
+- year
+- category
+
+Allow easy future editing.
+
+IMAGE HANDLING:
+Use uploaded award images where available.
+If some assets are low quality or awkward, use cleaner text-led cards instead of forcing every image into the layout.
+
+OPTIONAL:
+Add an “Award-Winning Composition” label or badge somewhere tasteful on the homepage or About page.
+
+DELIVERABLE:
+Build:
+- homepage awards section
+- /awards page
+- reusable card component
+- optional modal/lightbox for award images
+- clean structured data source for future additions

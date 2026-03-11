@@ -1,0 +1,128 @@
+PROJECT: Colin McGinness composer website
+
+TASK:
+I am uploading a ZIP file containing album cover images for Colin McGinness.
+Please extract the ZIP, place the images into the correct public assets folder, and create a premium horizontally scrolling “Album Covers” section for the site.
+
+GOAL:
+Display Colin’s album covers in a polished Netflix / Disney+ style horizontal rail.
+These are album covers for productions Colin composed on, so they should feel premium, cinematic, and visually important.
+
+IMPORTANT:
+Use the uploaded ZIP file as the image source.
+Please automatically extract the ZIP and wire the images into the site cleanly.
+
+REQUIREMENTS:
+
+1) EXTRACT ZIP
+- Extract the uploaded ZIP file of album covers
+- Place all usable image files into an appropriate public folder, for example:
+  /public/images/album-covers/
+- Ignore any non-image files or macOS metadata junk like __MACOSX folders, .DS_Store, etc.
+- Support common image types like .jpg, .jpeg, .png, .webp
+
+2) CREATE DATA SOURCE
+Create a clean data array or JSON source for the album covers, based on the extracted files.
+For each image, include:
+- src
+- alt
+- title
+
+Use the filename to generate a human-readable title where possible.
+If the filename is messy, still create a sensible placeholder title based on the filename.
+
+Example structure:
+[
+  {
+    src: "/images/album-covers/example-cover.jpg",
+    alt: "Album cover - Example Cover",
+    title: "Example Cover"
+  }
+]
+
+3) BUILD A PREMIUM ALBUM COVERS SECTION
+Add a homepage section titled:
+Album Covers
+
+Add supporting text such as:
+A selection of production music album covers featuring Colin McGinness as composer.
+
+Display the covers in a horizontal scrolling rail inspired by Netflix / Disney+:
+- poster/card style layout
+- rounded corners
+- subtle shadow
+- smooth hover effect
+- slight scale-up on hover
+- elegant spacing
+- works beautifully on desktop and mobile
+- can be dragged / swiped on mobile if appropriate
+
+4) RANDOMISE ORDER ON EACH PAGE LOAD
+IMPORTANT:
+Shuffle the album cover order each time the page loads.
+
+BUT:
+- Do NOT shuffle on the server
+- Do NOT use Math.random() during server render
+- Avoid hydration mismatch issues
+
+IMPLEMENTATION REQUIREMENT:
+- Render the original array on the server
+- Then shuffle client-side only after mount using useEffect + useState
+- This should create a fresh order on each visit / refresh without hydration errors
+
+5) LIGHTBOX / MODAL
+When a user clicks an album cover:
+- open a clean modal / lightbox
+- show a larger version of the image
+- display the title underneath
+- allow close button / escape / click outside to close
+
+Keep this elegant and minimal.
+
+6) SECTION PLACEMENT
+Add this “Album Covers” rail to the homepage in a sensible location.
+Suggested placement:
+below “Featured Showreels” and above “Selected TV & Film Syncs”
+
+7) FUTURE-PROOFING
+Structure this so I can easily:
+- add more covers later by dropping more files into the folder
+- replace titles manually later if needed
+- reuse the same rail component on another page if desired
+
+8) PERFORMANCE
+- Use optimized image rendering if the framework supports it
+- Keep layout stable while images load
+- Use lazy loading where sensible
+- Ensure the section remains smooth and not clunky
+
+9) FALLBACKS
+If some filenames are ugly or unreadable:
+- still display the image
+- generate a safe fallback title like:
+  Album Cover
+or
+  Production Music Album Cover
+
+10) DESIGN
+Match the rest of the Colin McGinness site:
+- dark cinematic background
+- premium visual feel
+- elegant white/soft grey text
+- no clutter
+- streaming-platform inspiration
+
+DELIVERABLE:
+Please:
+- extract the ZIP
+- place the images in the public folder
+- generate the data source
+- build the reusable Album Covers rail
+- randomise order client-side on page load safely
+- add the section to the homepage
+- include a lightbox/modal on click
+
+If there is already an existing content rail component on the site, reuse it and adapt it for album covers.
+If not, create a reusable component such as:
+AlbumCoversRail.tsx

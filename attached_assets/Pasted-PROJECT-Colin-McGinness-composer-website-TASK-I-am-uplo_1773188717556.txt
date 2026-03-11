@@ -1,0 +1,200 @@
+PROJECT: Colin McGinness composer website
+
+TASK:
+I am uploading a folder or ZIP of film-related images for projects Colin McGinness composed music for.
+
+Please use these images to build a premium “Films” showcase section on the homepage and improve/create the dedicated Film page.
+
+GOAL:
+Showcase the films Colin has composed for in a cinematic, high-end way that matches the rest of the website.
+This should feel like a serious film composer portfolio, not just an image dump.
+
+IMPORTANT:
+Use the uploaded images as source material.
+Some files may be posters, some may be premiere graphics, some may be soundtrack covers, and some may be supporting promo assets.
+Please organise them sensibly and prioritise the strongest poster-style visuals.
+
+DESIGN DIRECTION:
+- dark cinematic style
+- black / charcoal background
+- elegant typography
+- poster-led layout
+- premium spacing
+- subtle hover zoom
+- Netflix / Disney+ inspired content rails where appropriate
+- no clutter
+
+STEP 1 — IMPORT / ORGANISE IMAGES
+
+Take the uploaded film images and place them into a suitable public folder, for example:
+
+/public/images/films/
+
+Ignore junk/system files if present.
+
+Use filenames to help infer likely project names.
+
+Likely film/project groups include:
+- Girl Next
+- Sacrilege
+- The Quantum Devil
+- Angel’s Tide
+- Cash
+- The Dark Side of Society
+- The Impact 50
+- WhatsApp Image / miscellaneous supporting film assets
+- premiere images / soundtrack cover images / label or promo images where relevant
+
+STEP 2 — CREATE A CLEAN FILM DATA STRUCTURE
+
+Create a data array for film projects.
+Group related images under the same project where possible.
+
+Suggested structure:
+
+[
+  {
+    slug: "girl-next",
+    title: "Girl Next",
+    year: "",
+    poster: "/images/films/girl-next.jpeg",
+    gallery: [
+      "/images/films/girl-next.jpeg",
+      "/images/films/girl_next_premiere.jpeg"
+    ],
+    description: "Placeholder description for now.",
+    type: "Feature Film"
+  }
+]
+
+Use sensible grouping based on filenames.
+If multiple images clearly belong to the same film, group them together.
+If uncertain, still group conservatively and use placeholders that can be edited later.
+
+STEP 3 — HOMEPAGE SECTION
+
+Add a homepage section titled:
+
+Feature Films
+
+Supporting text:
+Selected film projects featuring original music composed by Colin McGinness.
+
+Display this as a premium horizontal scrolling rail or elegant poster grid using the strongest poster-style images first.
+
+Prioritise projects like:
+- Girl Next
+- Sacrilege
+- The Quantum Devil
+- Angel’s Tide
+- Cash
+- The Dark Side of Society
+
+Each card should include:
+- film title
+- optional type label such as Feature Film / Score / Soundtrack
+- subtle hover effect
+- click through to the Film page or dedicated film detail page
+
+Homepage goal:
+Quickly communicate that Colin has composed for real film projects.
+
+STEP 4 — FILM PAGE
+
+Create or improve the dedicated:
+
+/film
+
+page.
+
+This page should feel premium and cinematic.
+
+Recommended layout:
+
+1. Page hero
+Headline:
+Film Composition
+
+Subheading:
+Selected feature films and screen projects featuring original music by Colin McGinness.
+
+2. Featured film grid
+Large poster cards for the main projects.
+
+3. Optional project detail sections or expandable cards
+For each major film:
+- poster image
+- short placeholder description
+- supporting images if available
+- project type
+- optional awards/recognition hook if relevant later
+
+STEP 5 — OPTIONAL INDIVIDUAL FILM DETAIL PAGES
+
+If practical, create simple placeholder detail pages for the main films:
+- /film/girl-next
+- /film/sacrilege
+- /film/the-quantum-devil
+- /film/angels-tide
+
+Each page can include:
+- hero poster
+- placeholder synopsis area
+- image gallery
+- optional awards section later
+- optional soundtrack / trailer / credits section later
+
+If this is too much for now, keep it to one strong /film page with anchor sections.
+
+STEP 6 — IMAGE PRIORITY RULES
+
+Please prioritise:
+1. strong vertical poster images
+2. clean landscape promo images as supporting visuals
+3. soundtrack covers and premiere images as secondary gallery items
+
+Do NOT give equal visual weight to messy support graphics if stronger poster art exists.
+
+STEP 7 — LIGHTBOX / MODAL
+
+Allow clicking film images to open a larger image modal/lightbox where appropriate.
+
+STEP 8 — FUTURE-PROOFING
+
+Structure the film content so I can later:
+- replace posters
+- add synopsis text
+- add trailers / YouTube embeds
+- add soundtrack covers
+- add awards and festival laurels
+- refine titles and project metadata
+
+STEP 9 — COMPONENTS
+
+If useful, create reusable components such as:
+- FilmRail.tsx
+- FilmCard.tsx
+- FilmGallery.tsx
+
+STEP 10 — PLACEMENT
+
+On the homepage, place the Feature Films section in a sensible position.
+Recommended order:
+
+Hero Showreel
+Featured Showreels
+TV Sync Placements
+Album Covers
+Feature Films
+Awards & Recognition
+About
+Contact
+
+DELIVERABLE:
+Please:
+- import and organise the uploaded film images
+- group related assets by film title where possible
+- build a premium homepage “Feature Films” showcase
+- create or improve the /film page
+- use the strongest poster-style visuals first
+- keep the design cinematic, elegant and uncluttered

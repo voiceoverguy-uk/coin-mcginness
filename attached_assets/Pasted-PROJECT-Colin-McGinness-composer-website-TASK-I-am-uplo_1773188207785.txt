@@ -1,0 +1,160 @@
+PROJECT: Colin McGinness composer website
+
+TASK:
+I am uploading a ZIP file containing around 430 TV Sync images.
+
+Please extract the ZIP and automatically select ONLY portrait-orientation images (poster-style images) to use in a new homepage section called "TV Syncs".
+
+GOAL:
+Create a premium Netflix-style horizontal scrolling rail showing around 25 portrait TV Sync images that represent shows Colin's music has appeared in.
+
+IMPORTANT:
+Do NOT display all 430 images.
+Only select portrait images and limit to about 25.
+
+STEP 1 — EXTRACT THE ZIP
+
+Extract the uploaded ZIP archive.
+
+Move all valid image files to:
+
+/public/images/tv-syncs/
+
+Ignore:
+- __MACOSX folders
+- .DS_Store
+- hidden system files
+- non-image files
+
+Supported formats:
+.jpg
+.jpeg
+.png
+.webp
+
+STEP 2 — DETECT PORTRAIT IMAGES
+
+For each image:
+
+- Read image dimensions
+- Identify portrait orientation where:
+
+height > width
+
+Only keep portrait images.
+
+STEP 3 — LIMIT TO 25 IMAGES
+
+From the portrait images:
+
+- Randomly select 25
+- Store them in a clean data array
+
+Example structure:
+
+[
+  {
+    src: "/images/tv-syncs/example.jpg",
+    alt: "TV Sync placement",
+    title: "Example Show"
+  }
+]
+
+Use filename to generate titles where possible.
+
+STEP 4 — CREATE "TV SYNCS" SECTION
+
+Add a new homepage section titled:
+
+TV Sync Placements
+
+Subtitle text:
+
+A selection of television productions featuring music by Colin McGinness.
+
+Display the selected images as:
+
+Netflix-style horizontal scrolling rail
+
+Design requirements:
+
+- poster card style
+- portrait cards
+- rounded corners
+- subtle shadow
+- hover zoom effect
+- elegant spacing
+- smooth horizontal scrolling
+- swipeable on mobile
+- dark cinematic styling
+
+STEP 5 — RANDOM ORDER EACH PAGE LOAD
+
+Shuffle the order of the 25 selected posters each time the page loads.
+
+IMPORTANT:
+
+Do NOT shuffle server-side.
+
+Instead:
+
+- render initial list normally
+- shuffle client-side using useEffect + useState
+- avoid hydration mismatch issues
+
+STEP 6 — LIGHTBOX MODAL
+
+When a poster is clicked:
+
+Open a modal/lightbox with:
+
+- larger image
+- title
+- close button
+
+Keep modal minimal and elegant.
+
+STEP 7 — PERFORMANCE
+
+Because the original ZIP contains hundreds of images:
+
+- Only load the selected 25
+- Lazy load images
+- Use optimized image component if available
+
+STEP 8 — FUTURE EDITING
+
+Structure this so it is easy later to:
+
+- replace images with Colin's selected favourites
+- manually edit titles
+- increase/decrease number of posters
+- reuse the rail component elsewhere
+
+STEP 9 — COMPONENT
+
+Create reusable component:
+
+TVSyncRail.tsx
+
+STEP 10 — PLACEMENT
+
+Add this section to the homepage below:
+
+Featured Showreels
+
+and above:
+
+Album Covers
+
+DELIVERABLE
+
+Replit should:
+
+1. Extract the ZIP
+2. Filter portrait images
+3. Select around 25
+4. Create data array
+5. Build Netflix-style TV Sync rail
+6. Shuffle order client-side
+7. Add section to homepage
