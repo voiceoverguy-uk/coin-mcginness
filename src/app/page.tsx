@@ -5,6 +5,7 @@ import FilmCard from '@/components/FilmCard'
 import ScrollRail from '@/components/ScrollRail'
 import AlbumCoversRail from '@/components/AlbumCoversRail'
 import TVSyncRail from '@/components/TVSyncRail'
+import TrailerSyncsRail from '@/components/TrailerSyncsRail'
 import HeroShowreel from '@/components/HeroShowreel'
 import { AwardCardSmall } from '@/components/AwardCard'
 import { featuredAwards } from '@/data/awards'
@@ -151,6 +152,16 @@ export default function Home() {
             <p className="text-cinema-muted mt-2">A selection of television productions featuring music by Colin McGinness</p>
           </div>
           <TVSyncRail />
+        </div>
+      </section>
+
+      <section className="py-8 md:py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-white">Trailer Syncs</h2>
+            <p className="text-cinema-muted mt-2">Music placements in major film and TV trailers</p>
+          </div>
+          <TrailerSyncsRail />
         </div>
       </section>
 
