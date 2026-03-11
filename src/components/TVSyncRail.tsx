@@ -42,7 +42,7 @@ export default function TVSyncRail() {
             <button
               key={sync.src}
               type="button"
-              className="flex-shrink-0 w-[140px] md:w-[170px] group focus:outline-none focus-visible:ring-2 focus-visible:ring-cinema-accent rounded-lg"
+              className="flex-shrink-0 w-[180px] sm:w-[220px] md:w-[260px] group focus:outline-none focus-visible:ring-2 focus-visible:ring-cinema-accent rounded-lg"
               onClick={() => setSelected(sync)}
               aria-label={`View ${sync.title}`}
             >
