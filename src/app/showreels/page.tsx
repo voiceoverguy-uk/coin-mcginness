@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import ShowreelPlayer from '@/components/ShowreelPlayer'
 
 export const metadata: Metadata = {
   title: 'Showreels - Colin McGinness | Composer',
@@ -14,6 +15,7 @@ const showreels = [
     title: 'Film Score Showreel',
     description: 'A showcase of original film scores composed for feature films and screen productions. This reel presents a selection of dramatic, atmospheric and action-driven compositions created for independent and commercial cinema.',
     youtubeId: 'I0fR1Z1G0fs',
+    customThumbnail: '/images/showreel-thumbnail.jpg',
   },
   {
     title: 'Trailer Syncs - Colin McGinness Showreel',
@@ -52,15 +54,11 @@ export default function ShowreelsPage() {
           {showreels.map((reel) => (
             <div key={reel.youtubeId} className="group">
               <div className="relative rounded-xl overflow-hidden shadow-2xl shadow-black/50 border border-cinema-border">
-                <div className="aspect-video">
-                  <iframe
-                    src={`https://www.youtube.com/embed/${reel.youtubeId}?rel=0`}
-                    className="w-full h-full"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    title={reel.title}
-                  />
-                </div>
+                <ShowreelPlayer
+                  youtubeId={reel.youtubeId}
+                  title={reel.title}
+                  customThumbnail={reel.customThumbnail}
+                />
               </div>
               <div className="mt-4">
                 <h2 className="text-xl md:text-2xl font-semibold text-white">{reel.title}</h2>
