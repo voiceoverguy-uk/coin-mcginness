@@ -17,8 +17,8 @@ const broadcasters = [
 
 const highlights = [
   { label: 'Years of Experience', value: '20+' },
-  { label: 'Production Albums', value: '50+' },
-  { label: 'Global Sync Placements', value: '500+' },
+  { label: 'Production Albums', value: '80+' },
+  { label: 'Global Sync Placements', value: '1000+' },
   { label: 'Feature Film Scores', value: '5+' },
 ]
 
