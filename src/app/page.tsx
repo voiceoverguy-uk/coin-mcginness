@@ -1,15 +1,14 @@
 import Link from 'next/link'
 import VideoCard from '@/components/VideoCard'
 import SyncCard from '@/components/SyncCard'
-import FilmCard from '@/components/FilmCard'
 import ScrollRail from '@/components/ScrollRail'
 import AlbumCoversRail from '@/components/AlbumCoversRail'
 import TVSyncRail from '@/components/TVSyncRail'
 import TrailerSyncsRail from '@/components/TrailerSyncsRail'
+import FilmsRail from '@/components/FilmsRail'
 import HeroShowreel from '@/components/HeroShowreel'
 import { AwardCardSmall } from '@/components/AwardCard'
 import { featuredAwards } from '@/data/awards'
-import { films } from '@/data/films'
 
 const showreels = [
   {
@@ -135,13 +134,7 @@ export default function Home() {
               </svg>
             </Link>
           </div>
-          <ScrollRail className="gap-4 md:gap-6 pb-4">
-            {films.slice(0, 7).map((film) => (
-              <div key={film.slug} className="flex-shrink-0 w-[180px] sm:w-[220px] md:w-[260px]">
-                <FilmCard film={film} />
-              </div>
-            ))}
-          </ScrollRail>
+          <FilmsRail />
         </div>
       </section>
 

@@ -6,8 +6,22 @@ import ScrollRail from '@/components/ScrollRail'
 import { trailerSyncs } from '@/data/trailerSyncs'
 import type { TrailerSync } from '@/data/trailerSyncs'
 
+function shuffle<T>(arr: T[]): T[] {
+  const a = [...arr]
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]]
+  }
+  return a
+}
+
 export default function TrailerSyncsRail() {
+  const [syncs, setSyncs] = useState<TrailerSync[]>(trailerSyncs)
   const [selected, setSelected] = useState<TrailerSync | null>(null)
+
+  useEffect(() => {
+    setSyncs(shuffle(trailerSyncs))
+  }, [])
 
   const closeModal = useCallback(() => setSelected(null), [])
 
@@ -24,7 +38,7 @@ export default function TrailerSyncsRail() {
     <>
       <div>
         <ScrollRail className="gap-4 pb-4">
-          {trailerSyncs.map((sync, i) => (
+          {syncs.map((sync, i) => (
             <button
               key={sync.src}
               type="button"
