@@ -27,7 +27,7 @@ export const albumCovers: AlbumCover[] = [
   { src: "/images/album-covers/bim114-hope-cover.jpg", alt: "Album cover - Hope", title: "Hope" },
   { src: "/images/album-covers/bim116-conspiracies-cover.jpg", alt: "Album cover - Conspiracies", title: "Conspiracies" },
   { src: "/images/album-covers/bim122-aftermath-cover.jpg", alt: "Album cover - Aftermath", title: "Aftermath" },
-  { src: "/images/album-covers/builds-cover.jpeg", alt: "Album cover - Builds", title: "Builds" },
+  { src: "/images/album-covers/builds-cover.jpeg", alt: "Album cover - Cinematic Builds", title: "Cinematic Builds" },
   { src: "/images/album-covers/christmas-hamper.jpg", alt: "Album cover - Christmas Hamper", title: "Christmas Hamper" },
   { src: "/images/album-covers/crunch-time.png", alt: "Album cover - Crunch Time", title: "Crunch Time" },
   { src: "/images/album-covers/ctt103-immense-wooshes-cover.jpg", alt: "Album cover - Immense Wooshes", title: "Immense Wooshes" },

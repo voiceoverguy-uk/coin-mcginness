@@ -139,9 +139,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="py-8 md:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-10">
+          <div className="mb-6">
             <h2 className="text-2xl md:text-3xl font-bold text-white">Feature Films</h2>
             <p className="text-cinema-muted mt-2">Selected film projects featuring original music composed by Colin McGinness</p>
           </div>
@@ -152,7 +152,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <div className="mt-8 text-center">
+          <div className="mt-6 text-center">
             <Link
               href="/film"
               className="inline-flex items-center text-white font-medium hover:text-cinema-accent transition-colors"
@@ -166,17 +166,17 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-cinema-darker/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
+      <section className="py-8 md:py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
           <h2 className="text-2xl md:text-3xl font-bold text-white">TV Sync Placements</h2>
           <p className="text-cinema-muted mt-2">A selection of television productions featuring music by Colin McGinness</p>
         </div>
         <TVSyncRail />
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="py-8 md:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-10">
+          <div className="mb-6">
             <h2 className="text-2xl md:text-3xl font-bold text-white">Featured Showreels</h2>
             <p className="text-cinema-muted mt-2">Explore a selection of showreels and compilations</p>
           </div>
@@ -188,17 +188,17 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-cinema-darker/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
+      <section className="py-8 md:py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
           <h2 className="text-2xl md:text-3xl font-bold text-white">Releases</h2>
           <p className="text-cinema-muted mt-2">A selection of production music releases featuring Colin McGinness as composer</p>
         </div>
         <AlbumCoversRail />
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="py-8 md:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-10">
+          <div className="mb-6">
             <h2 className="text-2xl md:text-3xl font-bold text-white">Selected TV & Film Syncs</h2>
             <p className="text-cinema-muted mt-2">Compositions placed across global television and film</p>
           </div>
@@ -212,9 +212,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-cinema-darker/30">
+      <section className="py-8 md:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-10">
+          <div className="mb-6">
             <h2 className="text-2xl md:text-3xl font-bold text-white">Selected Awards & Recognition</h2>
             <p className="text-cinema-muted mt-2">Winner and nominee recognition for original score and composition in film and broadcast</p>
           </div>
@@ -223,7 +223,7 @@ export default function Home() {
               <AwardCardSmall key={i} award={award} />
             ))}
           </div>
-          <div className="mt-8 text-center">
+          <div className="mt-6 text-center">
             <Link
               href="/awards"
               className="inline-flex items-center text-white font-medium hover:text-cinema-gold transition-colors"
@@ -237,7 +237,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="py-8 md:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="relative aspect-[4/5] rounded-xl overflow-hidden">
