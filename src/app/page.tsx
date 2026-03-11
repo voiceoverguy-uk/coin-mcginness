@@ -102,7 +102,7 @@ export default function Home() {
             </div>
             <HeroShowreel />
           </div>
-          <div className="mt-16 pt-8 border-t border-cinema-border">
+          <div className="mt-24 pt-10 border-t border-cinema-border">
             <div className="flex items-center justify-center gap-8 md:gap-16 flex-wrap">
               {credits.map((credit) => (
                 <span
@@ -198,25 +198,25 @@ export default function Home() {
 
       <section className="py-8 md:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-white">Awards & Recognition</h2>
-            <p className="text-cinema-muted mt-2">Winner and nominee recognition for original score and composition in film and broadcast</p>
+          <div className="mb-6 flex items-baseline justify-between">
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold text-white">Awards & Recognition</h2>
+              <p className="text-cinema-muted mt-2">Winner and nominee recognition for original score and composition in film and broadcast</p>
+            </div>
+            <Link
+              href="/awards"
+              className="inline-flex items-center text-sm text-cinema-muted hover:text-cinema-accent transition-colors whitespace-nowrap ml-4"
+            >
+              View All
+              <svg className="w-3.5 h-3.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {featuredAwards.map((award, i) => (
               <AwardCardSmall key={i} award={award} />
             ))}
-          </div>
-          <div className="mt-6 text-center">
-            <Link
-              href="/awards"
-              className="inline-flex items-center text-white font-medium hover:text-cinema-gold transition-colors"
-            >
-              View All Awards
-              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
           </div>
         </div>
       </section>
