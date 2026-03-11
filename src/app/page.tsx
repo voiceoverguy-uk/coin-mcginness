@@ -190,8 +190,8 @@ export default function Home() {
 
       <section className="py-16 md:py-24 bg-cinema-darker/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-white">Album Covers</h2>
-          <p className="text-cinema-muted mt-2">A selection of production music album covers featuring Colin McGinness as composer</p>
+          <h2 className="text-2xl md:text-3xl font-bold text-white">Releases</h2>
+          <p className="text-cinema-muted mt-2">A selection of production music releases featuring Colin McGinness as composer</p>
         </div>
         <AlbumCoversRail />
       </section>
