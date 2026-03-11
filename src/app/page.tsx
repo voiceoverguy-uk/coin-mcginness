@@ -75,7 +75,7 @@ const credits = ['Netflix', 'BBC', 'Paramount', 'CNN', 'National Geographic', 'C
 export default function Home() {
   return (
     <>
-      <section className="relative min-h-screen flex items-start pt-28 md:pt-36 pb-4">
+      <section className="relative min-h-[70vh] flex items-start pt-28 md:pt-36 pb-4">
         <div className="absolute inset-0">
           <img
             src="/images/hero-bg-logic.jpg"
