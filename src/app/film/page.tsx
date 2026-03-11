@@ -27,9 +27,11 @@ export default function FilmPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+        <div className="flex gap-4 md:gap-6 overflow-x-auto pb-4 scroll-rail">
           {films.map((film) => (
-            <FilmCard key={film.slug} film={film} />
+            <div key={film.slug} className="flex-shrink-0 w-[160px] sm:w-[180px] md:w-[200px]">
+              <FilmCard film={film} />
+            </div>
           ))}
         </div>
       </div>

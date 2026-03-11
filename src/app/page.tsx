@@ -76,7 +76,15 @@ export default function Home() {
   return (
     <>
       <section className="relative min-h-screen flex items-center pt-20 pb-16">
-        <div className="absolute inset-0 bg-gradient-to-b from-cinema-darker via-cinema-dark to-cinema-dark" />
+        <div className="absolute inset-0">
+          <img
+            src="/images/hero-bg.jpg"
+            alt=""
+            className="w-full h-full object-cover object-bottom opacity-[0.15]"
+            aria-hidden="true"
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-cinema-darker/80 via-cinema-dark/90 to-cinema-dark" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-cinema-accent/5 via-transparent to-transparent" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
