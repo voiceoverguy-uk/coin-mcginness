@@ -23,10 +23,10 @@ export async function POST(request: NextRequest) {
 
     const { client, fromEmail } = await getUncachableResendClient();
 
-    const senderAddress = fromEmail || 'onboarding@resend.dev';
+    console.log('Sending email via Resend from:', fromEmail);
 
-    await client.emails.send({
-      from: `Colin McGinness Website <${senderAddress}>`,
+    const result = await client.emails.send({
+      from: `Colin McGinness Website <${fromEmail}>`,
       to: 'colin_mcginness@yahoo.com',
       replyTo: email,
       subject: `Contact Form: ${name}`,
@@ -45,9 +45,18 @@ export async function POST(request: NextRequest) {
       `,
     });
 
+    if (result.error) {
+      console.error('Resend API error:', JSON.stringify(result.error));
+      return NextResponse.json(
+        { error: result.error.message || 'Failed to send email' },
+        { status: 500 }
+      );
+    }
+
+    console.log('Email sent successfully, id:', result.data?.id);
     return NextResponse.json({ success: true });
   } catch (error: any) {
-    console.error('Contact form error:', error);
+    console.error('Contact form error:', error?.message || error);
     return NextResponse.json(
       { error: 'Failed to send message. Please try again.' },
       { status: 500 }
