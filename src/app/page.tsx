@@ -102,7 +102,7 @@ export default function Home() {
             </div>
             <HeroShowreel />
           </div>
-          <div className="mt-10 pt-6 border-t border-cinema-border">
+          <div className="mt-16 pt-8 border-t border-cinema-border">
             <div className="flex items-center justify-center gap-8 md:gap-16 flex-wrap">
               {credits.map((credit) => (
                 <span
