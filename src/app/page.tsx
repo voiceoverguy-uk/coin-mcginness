@@ -2,6 +2,11 @@ import Link from 'next/link'
 import VideoCard from '@/components/VideoCard'
 import SyncCard from '@/components/SyncCard'
 import FilmCard from '@/components/FilmCard'
+import AlbumCoversRail from '@/components/AlbumCoversRail'
+import TVSyncRail from '@/components/TVSyncRail'
+import { AwardCardSmall } from '@/components/AwardCard'
+import { featuredAwards } from '@/data/awards'
+import { films } from '@/data/films'
 
 const showreels = [
   {
@@ -62,14 +67,6 @@ const syncPlacements = [
     caption: '7 tracks from the INTENSITY album appear in this Discovery Channel feature.',
     youtubeUrl: 'https://www.youtube.com/watch?v=8-gDJeb44rs',
   },
-]
-
-const films = [
-  { title: 'Sacrilege', slug: 'sacrilege' },
-  { title: 'Girl Next', slug: 'girl-next' },
-  { title: 'The Quantum Devil', slug: 'the-quantum-devil' },
-  { title: 'The Dark Side of Society', slug: 'the-dark-side-of-society' },
-  { title: "Angel's Tide", slug: 'angels-tide' },
 ]
 
 const credits = ['Netflix', 'BBC', 'Paramount', 'CNN', 'National Geographic', 'Channel 4']
@@ -160,6 +157,22 @@ export default function Home() {
       </section>
 
       <section className="py-16 md:py-24 bg-cinema-darker/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
+          <h2 className="text-2xl md:text-3xl font-bold text-white">Album Covers</h2>
+          <p className="text-cinema-muted mt-2">A selection of production music album covers featuring Colin McGinness as composer</p>
+        </div>
+        <AlbumCoversRail />
+      </section>
+
+      <section className="py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
+          <h2 className="text-2xl md:text-3xl font-bold text-white">TV Sync Placements</h2>
+          <p className="text-cinema-muted mt-2">A selection of television productions featuring music by Colin McGinness</p>
+        </div>
+        <TVSyncRail />
+      </section>
+
+      <section className="py-16 md:py-24 bg-cinema-darker/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-10">
             <h2 className="text-2xl md:text-3xl font-bold text-white">Selected TV & Film Syncs</h2>
@@ -178,18 +191,54 @@ export default function Home() {
       <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-white">Feature Film Scores</h2>
-            <p className="text-cinema-muted mt-2">Original scores composed for feature films</p>
+            <h2 className="text-2xl md:text-3xl font-bold text-white">Feature Films</h2>
+            <p className="text-cinema-muted mt-2">Selected film projects featuring original music composed by Colin McGinness</p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6">
-            {films.map((film) => (
-              <FilmCard key={film.slug} {...film} />
+            {films.slice(0, 7).map((film) => (
+              <FilmCard key={film.slug} film={film} />
             ))}
+          </div>
+          <div className="mt-8 text-center">
+            <Link
+              href="/film"
+              className="inline-flex items-center text-white font-medium hover:text-cinema-accent transition-colors"
+            >
+              View All Films
+              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
           </div>
         </div>
       </section>
 
       <section className="py-16 md:py-24 bg-cinema-darker/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-white">Selected Awards & Recognition</h2>
+            <p className="text-cinema-muted mt-2">Winner and nominee recognition for original score and composition in film and broadcast</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            {featuredAwards.map((award, i) => (
+              <AwardCardSmall key={i} award={award} />
+            ))}
+          </div>
+          <div className="mt-8 text-center">
+            <Link
+              href="/awards"
+              className="inline-flex items-center text-white font-medium hover:text-cinema-gold transition-colors"
+            >
+              View All Awards
+              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="relative aspect-[4/5] rounded-xl overflow-hidden bg-gradient-to-br from-cinema-card via-cinema-border to-cinema-card flex items-center justify-center">
@@ -225,7 +274,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 md:py-28">
+      <section className="py-20 md:py-28 bg-cinema-darker/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
             Looking for original music, trailer-ready composition or sync-friendly screen music?

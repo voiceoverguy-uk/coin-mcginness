@@ -1,30 +1,113 @@
-import Link from 'next/link'
+'use client'
 
-interface FilmCardProps {
-  title: string
-  slug: string
-}
+import { useState, useEffect, useCallback } from 'react'
+import { X, ChevronLeft, ChevronRight } from 'lucide-react'
+import type { Film } from '@/data/films'
 
-export default function FilmCard({ title, slug }: FilmCardProps) {
+export default function FilmCard({ film }: { film: Film }) {
+  const [galleryOpen, setGalleryOpen] = useState(false)
+  const [galleryIndex, setGalleryIndex] = useState(0)
+
+  const closeModal = useCallback(() => setGalleryOpen(false), [])
+
+  const nextImage = useCallback(() => {
+    setGalleryIndex(i => (i + 1) % film.gallery.length)
+  }, [film.gallery.length])
+
+  const prevImage = useCallback(() => {
+    setGalleryIndex(i => (i - 1 + film.gallery.length) % film.gallery.length)
+  }, [film.gallery.length])
+
+  useEffect(() => {
+    if (!galleryOpen) return
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') closeModal()
+      if (e.key === 'ArrowRight') nextImage()
+      if (e.key === 'ArrowLeft') prevImage()
+    }
+    document.addEventListener('keydown', handleKey)
+    return () => document.removeEventListener('keydown', handleKey)
+  }, [galleryOpen, closeModal, nextImage, prevImage])
+
   return (
-    <Link href={`/film#${slug}`} className="group block">
-      <div className="relative rounded-lg overflow-hidden bg-cinema-card transition-all duration-300 group-hover:scale-[1.03] group-hover:shadow-2xl group-hover:shadow-black/50">
-        <div className="aspect-[2/3] flex items-center justify-center bg-gradient-to-br from-cinema-card via-cinema-border to-cinema-card">
-          <div className="text-center p-4">
-            <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-cinema-border flex items-center justify-center">
-              <svg className="w-8 h-8 text-cinema-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
-              </svg>
-            </div>
-            <p className="text-xs text-cinema-muted uppercase tracking-wider">Feature Film Poster</p>
-            <p className="text-xs text-cinema-muted mt-1">Placeholder</p>
+    <>
+      <button
+        type="button"
+        className="group text-left w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-cinema-accent rounded-xl"
+        onClick={() => { setGalleryIndex(0); setGalleryOpen(true) }}
+        aria-label={`View ${film.title}`}
+      >
+        <div className="relative rounded-xl overflow-hidden bg-cinema-card border border-cinema-border transition-all duration-300 group-hover:border-cinema-accent/30 group-hover:shadow-2xl group-hover:shadow-black/50">
+          <div className="aspect-[2/3]">
+            <img
+              src={film.poster}
+              alt={`${film.title} poster`}
+              className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-75"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+          </div>
+          <div className="absolute bottom-0 left-0 right-0 p-4">
+            <span className="inline-block px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider rounded bg-cinema-accent/20 text-cinema-accent border border-cinema-accent/30 mb-2">
+              {film.type}
+            </span>
+            <h3 className="text-white font-bold text-base md:text-lg leading-tight">{film.title}</h3>
+            {film.year && <p className="text-cinema-muted text-xs mt-1">{film.year}</p>}
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent p-4 pt-12">
-          <h3 className="text-white font-semibold text-base">{title}</h3>
-          <p className="text-cinema-muted text-xs mt-1">Original Score</p>
+      </button>
+
+      {galleryOpen && (
+        <div
+          className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4"
+          role="dialog"
+          aria-modal="true"
+          aria-label={`${film.title} gallery`}
+          onClick={closeModal}
+        >
+          <button
+            className="absolute top-4 right-4 text-white hover:text-cinema-accent transition-colors z-10"
+            onClick={closeModal}
+            aria-label="Close gallery"
+          >
+            <X size={32} />
+          </button>
+
+          {film.gallery.length > 1 && (
+            <>
+              <button
+                className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-cinema-accent transition-colors z-10"
+                onClick={(e) => { e.stopPropagation(); prevImage() }}
+                aria-label="Previous image"
+              >
+                <ChevronLeft size={36} />
+              </button>
+              <button
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-cinema-accent transition-colors z-10"
+                onClick={(e) => { e.stopPropagation(); nextImage() }}
+                aria-label="Next image"
+              >
+                <ChevronRight size={36} />
+              </button>
+            </>
+          )}
+
+          <div className="max-w-3xl w-full" onClick={(e) => e.stopPropagation()}>
+            <img
+              src={film.gallery[galleryIndex]}
+              alt={`${film.title} - image ${galleryIndex + 1}`}
+              className="w-full rounded-lg shadow-2xl max-h-[80vh] object-contain mx-auto"
+            />
+            <div className="text-center mt-4">
+              <h3 className="text-white text-xl font-bold">{film.title}</h3>
+              <p className="text-cinema-muted text-sm mt-1">{film.description}</p>
+              {film.gallery.length > 1 && (
+                <p className="text-cinema-muted text-xs mt-2">{galleryIndex + 1} / {film.gallery.length}</p>
+              )}
+            </div>
+          </div>
         </div>
-      </div>
-    </Link>
+      )}
+    </>
   )
 }
