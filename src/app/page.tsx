@@ -119,6 +119,31 @@ export default function Home() {
 
       <section className="py-8 md:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="rounded-xl overflow-hidden bg-cinema-card">
+              <iframe
+                src="https://www.youtube.com/embed/gHvXvJ3b4XQ"
+                title="Colin McGinness - Showreel"
+                className="w-full aspect-video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+            <div className="rounded-xl overflow-hidden bg-cinema-card">
+              <iframe
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A238048467&color=%2335373d&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true"
+                title="Colin McGinness - Showcase on SoundCloud"
+                className="w-full aspect-video"
+                scrolling="no"
+                allow="autoplay"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-8 md:py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-6 flex items-baseline justify-between">
             <div>
               <h2 className="text-2xl md:text-3xl font-bold text-white">Films</h2>
