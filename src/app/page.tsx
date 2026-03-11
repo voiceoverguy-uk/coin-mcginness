@@ -11,11 +11,6 @@ import { films } from '@/data/films'
 
 const showreels = [
   {
-    title: 'Film Score Showreel',
-    description: 'A showcase of original film scores composed for feature films and screen productions.',
-    youtubeUrl: 'https://www.youtube.com/watch?v=I0fR1Z1G0fs',
-  },
-  {
     title: 'Trailer Syncs Showreel',
     description: 'A compilation of TV and film syncs that my compositions have appeared on.',
     youtubeUrl: 'https://www.youtube.com/watch?v=xcPHE1P2RVI',
@@ -29,6 +24,11 @@ const showreels = [
     title: 'Album Covers in Motion',
     description: 'A compilation of the many production albums released over the years.',
     youtubeUrl: 'https://www.youtube.com/watch?v=-zMy-Q0ZUrQ',
+  },
+  {
+    title: 'Composer Showcase - Film Trailers',
+    description: 'A showcase of compositions featured in major film trailers.',
+    youtubeUrl: 'https://www.youtube.com/watch?v=pyzJQOv2WP0',
   },
 ]
 
