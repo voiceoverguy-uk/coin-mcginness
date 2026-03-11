@@ -53,10 +53,10 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium tracking-wide transition-colors duration-200 ${
+                className={`relative text-sm font-medium tracking-wide transition-colors duration-200 pb-1 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-[#FF0000] after:transition-transform after:duration-300 after:origin-left ${
                   pathname === link.href
-                    ? 'text-white'
-                    : 'text-cinema-muted hover:text-white'
+                    ? 'text-white after:scale-x-100'
+                    : 'text-cinema-muted hover:text-white after:scale-x-0 hover:after:scale-x-100'
                 }`}
               >
                 {link.label}
