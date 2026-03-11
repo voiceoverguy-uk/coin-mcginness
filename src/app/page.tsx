@@ -225,9 +225,6 @@ export default function Home() {
               />
             </div>
             <div>
-              <p className="text-cinema-accent font-medium tracking-widest uppercase text-sm mb-4">
-                About
-              </p>
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">Colin McGinness</h2>
               <p className="text-cinema-muted leading-relaxed mb-6">
                 Colin McGinness is a highly experienced composer whose music has featured across film, television, trailers, documentaries and global sync campaigns. With a career spanning more than two decades, his work blends cinematic scale, tension, rhythm and orchestral depth across a wide range of screen productions.
