@@ -43,7 +43,7 @@ export async function getUncachableResendClient() {
   if (connectorCreds) {
     return {
       client: new Resend(connectorCreds.apiKey),
-      fromEmail: connectorCreds.fromEmail || 'onboarding@resend.dev'
+      fromEmail: 'noreply@colinmcginness.com'
     };
   }
 
@@ -52,7 +52,7 @@ export async function getUncachableResendClient() {
     throw new Error('Resend not configured: no Replit connector or RESEND_API_KEY found');
   }
 
-  const fromEmail = process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev';
+  const fromEmail = process.env.RESEND_FROM_EMAIL || 'noreply@colinmcginness.com';
   return {
     client: new Resend(apiKey),
     fromEmail
