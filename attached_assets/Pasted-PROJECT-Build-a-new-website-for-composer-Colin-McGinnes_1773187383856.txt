@@ -1,0 +1,268 @@
+PROJECT: Build a new website for composer Colin McGinness
+
+GOAL:
+Create the first polished version of a premium, cinematic composer portfolio website for Colin McGinness.
+
+This should feel visually inspired by Netflix / Disney+ / modern film streaming platforms:
+- dark background
+- elegant typography
+- large visual poster-style content cards
+- subtle hover effects
+- premium spacing
+- cinematic mood
+- not a generic corporate website
+
+IMPORTANT:
+Use PLACEHOLDER images for now wherever needed, but structure the site properly so real posters, album covers, stills, and collages can easily be swapped in later.
+
+SITE BRANDING:
+Top of navbar / logo text:
+Colin McGinness - Composer
+
+STYLE DIRECTION:
+- Dark luxury aesthetic
+- Backgrounds: near-black / charcoal / deep grey
+- Text: white / soft grey
+- Accent colour: muted cinematic red, amber, or steel blue
+- Rounded cards
+- Soft shadows
+- Smooth hover zoom on poster/showreel cards
+- Clean modern layout
+- Should feel high-end and film-industry credible
+
+TECH STACK:
+Build this in the same clean modern style as our recent Vercel/Replit sites.
+Use Next.js + Tailwind if appropriate.
+Make it responsive and polished on desktop and mobile.
+
+PAGES / STRUCTURE:
+Create the following pages:
+1. Home
+2. Showreels
+3. Film
+4. About
+5. Contact
+
+NAVIGATION:
+Top nav should include:
+- Home
+- Showreels
+- Film
+- About
+- Contact
+
+Top-left logo text:
+Colin McGinness - Composer
+
+Include a clean mobile hamburger menu.
+
+HOMEPAGE REQUIREMENTS:
+
+1) HERO SECTION
+This is the most important section.
+Make it cinematic and premium.
+
+Include:
+- Large headline such as:
+  "Music for Film, Television and Trailers"
+- Supporting text that positions Colin as a highly experienced composer with global TV, film and sync credits
+- Primary CTA button: Watch Showreel
+- Secondary CTA button: Contact
+
+FRONT AND CENTRE in the hero:
+Embed this YouTube video prominently:
+Main Film Score Showreel
+https://www.youtube.com/watch?v=I0fR1Z1G0fs
+
+The hero should immediately communicate:
+- serious composer
+- real credits
+- premium screen music
+- film / TV / trailer work
+
+2) CREDIBILITY / CREDIT STRIP
+Under the hero, add a clean scrolling or static text/logo strip with placeholder styling for major credits.
+Use text for now if logos are not available.
+Include:
+- Netflix
+- BBC
+- Paramount
+- CNN
+- National Geographic
+- Channel 4
+
+3) FEATURED SHOWREELS SECTION
+Create a premium card/grid section titled:
+Featured Showreels
+
+Include 4 large cards with play overlay icons and placeholder thumbnail backgrounds.
+Each card should have:
+- title
+- short description
+- button or click action to open/play the video
+
+Use these real YouTube links:
+
+A)
+Film Score Showreel
+https://www.youtube.com/watch?v=I0fR1Z1G0fs
+
+B)
+Trailer Syncs - Colin McGinness Showreel
+A compilation of TV and film syncs that my compositions have appeared on.
+https://www.youtube.com/watch?v=xcPHE1P2RVI
+
+C)
+Animated Syncs - Colin McGinness Showreel
+A compilation of the animated shows and films that my music has appeared in.
+https://www.youtube.com/watch?v=748HFAPqrwA
+
+D)
+Album Covers in Motion
+A compilation of the many production albums released over the years.
+https://www.youtube.com/watch?v=-zMy-Q0ZUrQ
+
+4) FEATURED SYNC PLACEMENTS SECTION
+Create a horizontally scrollable "content rail" section, streaming-platform style.
+Section title:
+Selected TV & Film Syncs
+
+Use poster-style cards with placeholder artwork for now.
+Each card should include title + short caption + link to YouTube.
+Include these items:
+
+- Joe Wicks: Licensed to Kill
+track "Global Surveillance" appears in this Channel 4 documentary.
+https://www.youtube.com/watch?v=U_QRcQPDnNQ
+
+- Jeopardy TV Spot Sync
+track "No More Heroes" appears on this promo spot for Jeopardy.
+https://www.youtube.com/watch?v=nifjxRKTyWQ
+
+- I'm a Celebrity, Get Me Out of Here
+"Call For Backup" provides energy for an action-packed sequence on the UK's biggest reality show.
+https://www.youtube.com/watch?v=LV3yhr8_-oM
+
+- Fukushima: Days That Shook The World
+A track from the NUCLEAR WAR album appears on this 2-part Channel 4 documentary.
+https://www.youtube.com/watch?v=66G4Ws5IPsw
+
+- Dexter Resurrection - TV Promo Spot
+Track: "Hidden Risks"
+https://www.youtube.com/watch?v=ruB_hwE5Y1k
+
+- BBC News 24 - Promo Spot
+https://www.youtube.com/watch?v=x98XsvSnP8c
+
+- Shark Week - Great White Reign of Terror
+7 tracks from the INTENSITY album appear in this Discovery Channel feature.
+https://www.youtube.com/watch?v=8-gDJeb44rs
+
+5) FEATURE FILM SECTION
+Create another premium rail/grid section titled:
+Feature Film Scores
+
+Use placeholder movie posters for now.
+Include these film titles as cards:
+- Sacrilege
+- Girl Next
+- The Quantum Devil
+- The Dark Side of Society
+- Angel’s Tide
+
+Each card should link for now to a placeholder film details page or anchor.
+Structure the code so real posters, synopsis text, soundtrack links, and trailers can be added later.
+
+6) ABOUT PREVIEW SECTION
+Add a short, classy About Colin section on the homepage with a placeholder portrait image.
+Tone should be confident and professional, not cheesy.
+
+Use this draft positioning:
+Colin McGinness is a highly experienced composer whose music has featured across film, television, trailers, documentaries and global sync campaigns. With a career spanning more than two decades, his work blends cinematic scale, tension, rhythm and orchestral depth across a wide range of screen productions.
+
+Add a "Read More" button linking to About page.
+
+7) FINAL CONTACT CTA BAND
+Add a strong closing section with text such as:
+Looking for original music, trailer-ready composition or sync-friendly screen music?
+Button:
+Contact Colin
+
+SHOWREELS PAGE:
+Create a dedicated Showreels page that presents:
+- Film Score Showreel
+- Trailer Syncs
+- Animated Syncs
+- Album Covers in Motion
+
+Each in a clean embedded video layout with title and short description.
+Keep it elegant and spacious.
+
+FILM PAGE:
+Create a Film page with a premium poster-grid layout for:
+- Sacrilege
+- Girl Next
+- The Quantum Devil
+- The Dark Side of Society
+- Angel’s Tide
+
+Use placeholders for posters and descriptions for now.
+Set this page up so it can later expand into individual project pages.
+
+ABOUT PAGE:
+Create an About page with:
+- headline
+- professional intro
+- placeholder portrait image
+- short biography
+- section about experience in film, TV, trailers, documentaries and sync work
+- section for selected credits / broadcasters / platforms
+- optional simple timeline or highlighted achievements area
+
+CONTACT PAGE:
+Create a clean contact page with:
+- contact form
+- name
+- email
+- message
+- submit button
+
+For now, form can be UI only if backend is not yet wired.
+Also include a section for professional enquiries.
+
+FOOTER:
+Include a premium simple footer with:
+- Colin McGinness - Composer
+- navigation links
+- copyright line
+- placeholder social/media links if needed
+
+IMAGE / MEDIA PLACEHOLDERS:
+Since real assets are not yet loaded, use tasteful placeholder blocks/cards with labels like:
+- Feature Film Poster Placeholder
+- TV Sync Artwork Placeholder
+- Album Cover Placeholder
+- Colin Portrait Placeholder
+
+IMPORTANT UX DETAILS:
+- Smooth hover states on all cards
+- Show play icon overlays on video/showreel cards
+- Horizontal scrolling rails should feel premium and work well on mobile
+- Keep spacing generous
+- Avoid clutter
+- Avoid giant walls of text
+- Make homepage feel curated and visual
+
+SEO / META:
+Add proper metadata for each page with sensible unique titles and descriptions.
+Homepage title suggestion:
+Colin McGinness - Composer for Film, Television and Trailers
+
+Homepage meta description suggestion:
+Explore the work of Colin McGinness, a composer creating music for film, television, trailers, documentaries and global sync placements.
+
+Also add basic Open Graph metadata.
+
+DELIVERABLE:
+Build the first polished version of the site with the full structure, real YouTube links, placeholders for imagery, and a premium cinematic visual style.
+Focus on making the homepage feel impressive immediately.
