@@ -101,20 +101,17 @@ export default function Home() {
             </div>
             <HeroShowreel />
           </div>
-        </div>
-      </section>
-
-      <section className="py-4 border-y border-cinema-border bg-cinema-darker/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-center gap-8 md:gap-16 flex-wrap">
-            {credits.map((credit) => (
-              <span
-                key={credit}
-                className="text-cinema-muted/60 text-sm md:text-base font-semibold tracking-widest uppercase whitespace-nowrap"
-              >
-                {credit}
-              </span>
-            ))}
+          <div className="mt-10 pt-6 border-t border-cinema-border">
+            <div className="flex items-center justify-center gap-8 md:gap-16 flex-wrap">
+              {credits.map((credit) => (
+                <span
+                  key={credit}
+                  className="text-cinema-muted/60 text-sm md:text-base font-semibold tracking-widest uppercase whitespace-nowrap"
+                >
+                  {credit}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>
