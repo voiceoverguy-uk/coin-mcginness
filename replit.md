@@ -26,16 +26,25 @@ src/
     about/
       page.tsx          - Biography, stats, broadcasters list
     contact/
-      page.tsx          - Contact form (UI only, no backend)
+      page.tsx          - Contact form with Resend email integration
       layout.tsx        - Contact page metadata
+    api/
+      contact/
+        route.ts        - POST endpoint for contact form (sends email via Resend)
+  lib/
+    resend.ts           - Resend client setup via Replit connector
   components/
-    Navbar.tsx          - Fixed top nav with mobile hamburger menu
+    Navbar.tsx          - Fixed top nav with mobile hamburger menu, animated red underline on hover
     Footer.tsx          - Site footer with nav links + social placeholders
     VideoCard.tsx       - Showreel card with play overlay + lightbox modal
     SyncCard.tsx        - Horizontal scroll sync placement card + lightbox
     FilmCard.tsx        - Film poster card with gallery lightbox (arrow nav)
     AlbumCoversRail.tsx - Horizontal scrolling album covers rail (shuffled client-side)
     TVSyncRail.tsx      - Horizontal scrolling TV sync poster rail (shuffled client-side)
+    TrailerSyncsRail.tsx - Horizontal scrolling trailer sync rail (shuffled client-side)
+    FilmsRail.tsx       - Horizontal scrolling films rail (shuffled client-side)
+    ScrollRail.tsx      - Reusable horizontal scroll container with hover arrows
+    HeroShowreel.tsx    - Hero section YouTube showreel embed
     AwardCard.tsx       - Award card components (Small + Large variants, gold accent)
   data/
     albumCovers.ts      - 89 album cover entries with src/alt/title
@@ -64,7 +73,7 @@ public/
 3. **Film** (/film) - Real poster grid with gallery lightbox for 7 film projects
 4. **Awards** (/awards) - Featured wins, nominations, festival recognition with gold accent
 5. **About** (/about) - Biography, stats, broadcaster tags
-6. **Contact** (/contact) - Contact form (UI-only) with professional enquiries sidebar
+6. **Contact** (/contact) - Contact form (sends email via Resend to colin_mcginness@yahoo.com) with professional enquiries sidebar
 
 ## Running Locally
 ```bash

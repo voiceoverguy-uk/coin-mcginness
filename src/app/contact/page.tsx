@@ -5,10 +5,39 @@ import type { FormEvent } from 'react'
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    setSubmitted(true)
+    setLoading(true)
+    setError('')
+
+    const formData = new FormData(e.currentTarget)
+    const data = {
+      name: formData.get('name') as string,
+      email: formData.get('email') as string,
+      message: formData.get('message') as string,
+    }
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      })
+
+      if (!res.ok) {
+        const result = await res.json()
+        throw new Error(result.error || 'Failed to send message')
+      }
+
+      setSubmitted(true)
+    } catch (err: any) {
+      setError(err.message || 'Something went wrong. Please try again.')
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -42,6 +71,11 @@ export default function ContactPage() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
+                {error && (
+                  <div className="bg-red-900/30 border border-red-700 rounded-lg p-4 text-red-300 text-sm">
+                    {error}
+                  </div>
+                )}
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
                     Name
@@ -51,7 +85,8 @@ export default function ContactPage() {
                     id="name"
                     name="name"
                     required
-                    className="w-full px-4 py-3 bg-cinema-card border border-cinema-border rounded-lg text-white placeholder-cinema-muted/50 focus:outline-none focus:border-cinema-accent focus:ring-1 focus:ring-cinema-accent transition-colors"
+                    disabled={loading}
+                    className="w-full px-4 py-3 bg-cinema-card border border-cinema-border rounded-lg text-white placeholder-cinema-muted/50 focus:outline-none focus:border-cinema-accent focus:ring-1 focus:ring-cinema-accent transition-colors disabled:opacity-50"
                     placeholder="Your name"
                   />
                 </div>
@@ -64,7 +99,8 @@ export default function ContactPage() {
                     id="email"
                     name="email"
                     required
-                    className="w-full px-4 py-3 bg-cinema-card border border-cinema-border rounded-lg text-white placeholder-cinema-muted/50 focus:outline-none focus:border-cinema-accent focus:ring-1 focus:ring-cinema-accent transition-colors"
+                    disabled={loading}
+                    className="w-full px-4 py-3 bg-cinema-card border border-cinema-border rounded-lg text-white placeholder-cinema-muted/50 focus:outline-none focus:border-cinema-accent focus:ring-1 focus:ring-cinema-accent transition-colors disabled:opacity-50"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -77,15 +113,27 @@ export default function ContactPage() {
                     name="message"
                     required
                     rows={6}
-                    className="w-full px-4 py-3 bg-cinema-card border border-cinema-border rounded-lg text-white placeholder-cinema-muted/50 focus:outline-none focus:border-cinema-accent focus:ring-1 focus:ring-cinema-accent transition-colors resize-none"
+                    disabled={loading}
+                    className="w-full px-4 py-3 bg-cinema-card border border-cinema-border rounded-lg text-white placeholder-cinema-muted/50 focus:outline-none focus:border-cinema-accent focus:ring-1 focus:ring-cinema-accent transition-colors resize-none disabled:opacity-50"
                     placeholder="Tell me about your project..."
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full px-6 py-3 bg-cinema-accent hover:bg-cinema-accent-hover text-white font-semibold rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-cinema-accent/25"
+                  disabled={loading}
+                  className="w-full px-6 py-3 bg-cinema-accent hover:bg-cinema-accent-hover text-white font-semibold rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-cinema-accent/25 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
-                  Send Message
+                  {loading ? (
+                    <>
+                      <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                      </svg>
+                      Sending...
+                    </>
+                  ) : (
+                    'Send Message'
+                  )}
                 </button>
               </form>
             )}
