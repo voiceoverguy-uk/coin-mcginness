@@ -41,8 +41,10 @@ export default function TrailerSyncsRail() {
                     loading={i < 6 ? 'eager' : 'lazy'}
                   />
                 </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                  <p className="text-white text-xs font-medium leading-tight line-clamp-2">{sync.title}</p>
+                </div>
               </div>
-              <p className="mt-2 px-1 text-cinema-muted text-xs leading-tight line-clamp-2 text-left">{sync.title}</p>
             </button>
           ))}
         </ScrollRail>

@@ -45,11 +45,12 @@ export default function FilmCard({ film }: { film: Film }) {
               className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-75"
               loading="lazy"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
           </div>
-          <div className="absolute bottom-0 left-0 right-0 p-4">
-            <h3 className="text-white font-bold text-base md:text-lg leading-tight">{film.title}</h3>
-            {film.year && <p className="text-cinema-muted text-xs mt-1">{film.year}</p>}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 flex items-end p-4">
+            <div>
+              <h3 className="text-white font-bold text-base md:text-lg leading-tight">{film.title}</h3>
+              {film.year && <p className="text-cinema-muted text-xs mt-1">{film.year}</p>}
+            </div>
           </div>
         </div>
       </button>
