@@ -46,9 +46,8 @@ export function AwardCardSmall({ award }: { award: Award }) {
               className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-75"
               loading="lazy"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
           </div>
-          <div className="absolute bottom-0 left-0 right-0 p-4">
+          <div className="p-3">
             <ResultBadge result={award.result} />
             <h3 className="text-white font-semibold text-sm mt-2 leading-tight">{award.category}</h3>
             {award.project && (
@@ -124,9 +123,8 @@ export function AwardCardLarge({ award }: { award: Award }) {
               className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-75"
               loading="lazy"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
           </div>
-          <div className="absolute bottom-0 left-0 right-0 p-5">
+          <div className="p-4">
             <ResultBadge result={award.result} />
             <h3 className="text-white font-bold text-base md:text-lg mt-2 leading-tight">{award.category}</h3>
             {award.project && (

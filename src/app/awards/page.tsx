@@ -30,9 +30,11 @@ export default function AwardsPage() {
         {wins.length > 0 && (
           <section className="mb-16">
             <h2 className="text-xl md:text-2xl font-bold text-white mb-6">Featured Wins</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="flex gap-6 overflow-x-auto pb-4 scroll-rail">
               {wins.map((award, i) => (
-                <AwardCardLarge key={i} award={award} />
+                <div key={i} className="flex-shrink-0 w-[260px] sm:w-[280px] md:w-[300px]">
+                  <AwardCardLarge award={award} />
+                </div>
               ))}
             </div>
           </section>
