@@ -75,7 +75,7 @@ const credits = ['Netflix', 'BBC', 'Paramount', 'CNN', 'National Geographic', 'C
 export default function Home() {
   return (
     <>
-      <section className="relative min-h-screen flex items-center pt-20 pb-16">
+      <section className="relative min-h-screen flex items-center pt-20 pb-4">
         <div className="absolute inset-0">
           <img
             src="/images/hero-bg.jpg"
@@ -89,9 +89,6 @@ export default function Home() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <p className="text-cinema-accent font-medium tracking-widest uppercase text-sm mb-4">
-                Colin McGinness
-              </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
                 Music for Film,{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-cinema-muted">
@@ -101,30 +98,13 @@ export default function Home() {
               <p className="mt-6 text-lg text-cinema-muted leading-relaxed max-w-xl">
                 A highly experienced composer with global TV, film and sync credits spanning more than two decades. Crafting cinematic scores, trailer-ready compositions and production music for the world&apos;s leading broadcasters and platforms.
               </p>
-              <div className="mt-8 flex flex-wrap gap-4">
-                <a
-                  href="#showreel"
-                  className="inline-flex items-center px-6 py-3 bg-cinema-accent hover:bg-cinema-accent-hover text-white font-medium rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-cinema-accent/25"
-                >
-                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                  Watch Showreel
-                </a>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center px-6 py-3 border border-cinema-border text-white font-medium rounded-lg hover:bg-white/5 transition-all duration-200"
-                >
-                  Contact
-                </Link>
-              </div>
             </div>
             <HeroShowreel />
           </div>
         </div>
       </section>
 
-      <section className="py-8 border-y border-cinema-border bg-cinema-darker/50">
+      <section className="py-4 border-y border-cinema-border bg-cinema-darker/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center gap-8 md:gap-16 flex-wrap">
             {credits.map((credit) => (
