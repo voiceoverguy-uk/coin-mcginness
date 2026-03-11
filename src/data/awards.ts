@@ -10,7 +10,7 @@ export interface Award {
 
 export const awards: Award[] = [
   {
-    image: "/images/awards/girl-next-film-festival-1.jpg",
+    image: "/images/awards/best-music-in-a-film.jpg",
     title: "Best Music in a Film",
     result: "Winner",
     project: "Girl Next",
@@ -19,7 +19,7 @@ export const awards: Award[] = [
     category: "Best Music in a Film"
   },
   {
-    image: "/images/awards/award-1.jpg",
+    image: "/images/awards/best-original-score.jpg",
     title: "Best Original Score",
     result: "Winner",
     project: "Girl Next",

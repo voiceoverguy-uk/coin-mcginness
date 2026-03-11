@@ -75,7 +75,7 @@ const credits = ['Netflix', 'BBC', 'Paramount', 'CNN', 'National Geographic', 'C
 export default function Home() {
   return (
     <>
-      <section className="relative min-h-[70vh] flex items-start pt-28 md:pt-36 pb-4">
+      <section className="relative min-h-[70vh] flex items-start pt-32 md:pt-40 pb-4">
         <div className="absolute inset-0">
           <img
             src="/images/hero-bg-logic.jpg"
@@ -119,7 +119,7 @@ export default function Home() {
       <section className="py-8 md:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-white">Feature Films</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-white">Films</h2>
             <p className="text-cinema-muted mt-2">Selected film projects featuring original music composed by Colin McGinness</p>
           </div>
           <div className="flex gap-4 md:gap-6 overflow-x-auto pb-4 scroll-rail">
@@ -145,7 +145,7 @@ export default function Home() {
 
       <section className="py-8 md:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-white">TV Sync Placements</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-white">TV Placements</h2>
           <p className="text-cinema-muted mt-2">A selection of television productions featuring music by Colin McGinness</p>
         </div>
         <TVSyncRail />
@@ -154,7 +154,7 @@ export default function Home() {
       <section className="py-8 md:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-white">Featured Showreels</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-white">Showreels</h2>
             <p className="text-cinema-muted mt-2">Explore a selection of showreels and compilations</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
@@ -192,7 +192,7 @@ export default function Home() {
       <section className="py-8 md:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-white">Selected Awards & Recognition</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-white">Awards & Recognition</h2>
             <p className="text-cinema-muted mt-2">Winner and nominee recognition for original score and composition in film and broadcast</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
