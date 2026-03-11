@@ -80,7 +80,7 @@ export default function Home() {
           <img
             src="/images/hero-bg-logic.jpg"
             alt=""
-            className="w-full h-full object-cover opacity-40"
+            className="w-full h-full object-cover opacity-50"
             aria-hidden="true"
           />
         </div>
