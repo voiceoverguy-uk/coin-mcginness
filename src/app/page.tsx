@@ -80,7 +80,7 @@ export default function Home() {
           <img
             src="/images/hero-bg.jpg"
             alt=""
-            className="w-full h-full object-cover object-bottom opacity-[0.15]"
+            className="w-full h-full object-cover object-bottom opacity-[0.30]"
             aria-hidden="true"
           />
         </div>
