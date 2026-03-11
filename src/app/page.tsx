@@ -142,58 +142,12 @@ export default function Home() {
       <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-white">Featured Showreels</h2>
-            <p className="text-cinema-muted mt-2">Explore a selection of showreels and compilations</p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-            {showreels.map((reel) => (
-              <VideoCard key={reel.title} {...reel} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 md:py-24 bg-cinema-darker/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-white">Album Covers</h2>
-          <p className="text-cinema-muted mt-2">A selection of production music album covers featuring Colin McGinness as composer</p>
-        </div>
-        <AlbumCoversRail />
-      </section>
-
-      <section className="py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-white">TV Sync Placements</h2>
-          <p className="text-cinema-muted mt-2">A selection of television productions featuring music by Colin McGinness</p>
-        </div>
-        <TVSyncRail />
-      </section>
-
-      <section className="py-16 md:py-24 bg-cinema-darker/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-white">Selected TV & Film Syncs</h2>
-            <p className="text-cinema-muted mt-2">Compositions placed across global television and film</p>
-          </div>
-        </div>
-        <div className="pl-4 sm:pl-6 lg:pl-[max(1.5rem,calc((100vw-80rem)/2+1.5rem))]">
-          <div className="flex gap-4 overflow-x-auto pb-4 scroll-rail">
-            {syncPlacements.map((sync) => (
-              <SyncCard key={sync.title} {...sync} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-10">
             <h2 className="text-2xl md:text-3xl font-bold text-white">Feature Films</h2>
             <p className="text-cinema-muted mt-2">Selected film projects featuring original music composed by Colin McGinness</p>
           </div>
           <div className="flex gap-4 md:gap-6 overflow-x-auto pb-4 scroll-rail">
             {films.slice(0, 7).map((film) => (
-              <div key={film.slug} className="flex-shrink-0 w-[140px] sm:w-[160px] md:w-[180px]">
+              <div key={film.slug} className="flex-shrink-0 w-[180px] sm:w-[220px] md:w-[260px]">
                 <FilmCard film={film} />
               </div>
             ))}
@@ -208,6 +162,52 @@ export default function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24 bg-cinema-darker/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-white">Featured Showreels</h2>
+            <p className="text-cinema-muted mt-2">Explore a selection of showreels and compilations</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+            {showreels.map((reel) => (
+              <VideoCard key={reel.title} {...reel} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
+          <h2 className="text-2xl md:text-3xl font-bold text-white">Album Covers</h2>
+          <p className="text-cinema-muted mt-2">A selection of production music album covers featuring Colin McGinness as composer</p>
+        </div>
+        <AlbumCoversRail />
+      </section>
+
+      <section className="py-16 md:py-24 bg-cinema-darker/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
+          <h2 className="text-2xl md:text-3xl font-bold text-white">TV Sync Placements</h2>
+          <p className="text-cinema-muted mt-2">A selection of television productions featuring music by Colin McGinness</p>
+        </div>
+        <TVSyncRail />
+      </section>
+
+      <section className="py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-white">Selected TV & Film Syncs</h2>
+            <p className="text-cinema-muted mt-2">Compositions placed across global television and film</p>
+          </div>
+        </div>
+        <div className="pl-4 sm:pl-6 lg:pl-[max(1.5rem,calc((100vw-80rem)/2+1.5rem))]">
+          <div className="flex gap-4 overflow-x-auto pb-4 scroll-rail">
+            {syncPlacements.map((sync) => (
+              <SyncCard key={sync.title} {...sync} />
+            ))}
           </div>
         </div>
       </section>
