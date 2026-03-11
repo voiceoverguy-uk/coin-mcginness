@@ -167,6 +167,14 @@ export default function Home() {
       </section>
 
       <section className="py-16 md:py-24 bg-cinema-darker/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
+          <h2 className="text-2xl md:text-3xl font-bold text-white">TV Sync Placements</h2>
+          <p className="text-cinema-muted mt-2">A selection of television productions featuring music by Colin McGinness</p>
+        </div>
+        <TVSyncRail />
+      </section>
+
+      <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-10">
             <h2 className="text-2xl md:text-3xl font-bold text-white">Featured Showreels</h2>
@@ -180,20 +188,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-cinema-darker/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
           <h2 className="text-2xl md:text-3xl font-bold text-white">Album Covers</h2>
           <p className="text-cinema-muted mt-2">A selection of production music album covers featuring Colin McGinness as composer</p>
         </div>
         <AlbumCoversRail />
-      </section>
-
-      <section className="py-16 md:py-24 bg-cinema-darker/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-white">TV Sync Placements</h2>
-          <p className="text-cinema-muted mt-2">A selection of television productions featuring music by Colin McGinness</p>
-        </div>
-        <TVSyncRail />
       </section>
 
       <section className="py-16 md:py-24">
