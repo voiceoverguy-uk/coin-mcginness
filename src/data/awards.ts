@@ -95,4 +95,3 @@ export const awards: Award[] = [
 export const featuredAwards = awards.filter(a => a.result === "Winner" || a.result === "Nominee").slice(0, 4)
 export const wins = awards.filter(a => a.result === "Winner")
 export const nominations = awards.filter(a => a.result === "Nominee")
-export const selections = awards.filter(a => a.result === "Official Selection")
