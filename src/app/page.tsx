@@ -84,8 +84,8 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="rounded-xl overflow-hidden bg-cinema-card">
               <iframe
-                src="https://www.youtube.com/embed/gHvXvJ3b4XQ"
-                title="Colin McGinness - Showreel"
+                src="https://www.youtube.com/embed/I0fR1Z1G0fs"
+                title="Colin McGinness - Film Score Showreel"
                 className="w-full aspect-video"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -93,7 +93,7 @@ export default function Home() {
             </div>
             <div className="rounded-xl overflow-hidden bg-cinema-card">
               <iframe
-                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A238048467&color=%2335373d&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A238048467&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
                 title="Colin McGinness - Showcase on SoundCloud"
                 className="w-full aspect-video"
                 scrolling="no"
