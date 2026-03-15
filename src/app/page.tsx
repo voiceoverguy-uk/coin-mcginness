@@ -1,12 +1,12 @@
 import Link from 'next/link'
 import VideoCard from '@/components/VideoCard'
-import SyncCard from '@/components/SyncCard'
 import ScrollRail from '@/components/ScrollRail'
 import AlbumCoversRail from '@/components/AlbumCoversRail'
 import TVSyncRail from '@/components/TVSyncRail'
 import TrailerSyncsRail from '@/components/TrailerSyncsRail'
 import FilmsRail from '@/components/FilmsRail'
 import HeroShowreel from '@/components/HeroShowreel'
+import SyncPlacementsRail from '@/components/SyncPlacementsRail'
 import { AwardCardSmall } from '@/components/AwardCard'
 import { featuredAwards } from '@/data/awards'
 
@@ -30,44 +30,6 @@ const showreels = [
     title: 'Composer Showcase - Film Trailers',
     description: 'A showcase of compositions featured in major film trailers.',
     youtubeUrl: 'https://www.youtube.com/watch?v=pyzJQOv2WP0',
-  },
-]
-
-const syncPlacements = [
-  {
-    title: 'Joe Wicks: Licensed to Kill',
-    caption: 'Track "Global Surveillance" appears in this Channel 4 documentary.',
-    youtubeUrl: 'https://www.youtube.com/watch?v=U_QRcQPDnNQ',
-  },
-  {
-    title: 'Jeopardy TV Spot Sync',
-    caption: 'Track "No More Heroes" appears on this promo spot for Jeopardy.',
-    youtubeUrl: 'https://www.youtube.com/watch?v=nifjxRKTyWQ',
-  },
-  {
-    title: "I'm a Celebrity, Get Me Out of Here",
-    caption: '"Call For Backup" provides energy for an action-packed sequence on the UK\'s biggest reality show.',
-    youtubeUrl: 'https://www.youtube.com/watch?v=LV3yhr8_-oM',
-  },
-  {
-    title: 'Fukushima: Days That Shook The World',
-    caption: 'A track from the NUCLEAR WAR album appears on this 2-part Channel 4 documentary.',
-    youtubeUrl: 'https://www.youtube.com/watch?v=66G4Ws5IPsw',
-  },
-  {
-    title: 'Dexter Resurrection - TV Promo Spot',
-    caption: 'Track: "Hidden Risks"',
-    youtubeUrl: 'https://www.youtube.com/watch?v=ruB_hwE5Y1k',
-  },
-  {
-    title: 'BBC News 24 - Promo Spot',
-    caption: 'Music featured on the BBC News 24 promo campaign.',
-    youtubeUrl: 'https://www.youtube.com/watch?v=x98XsvSnP8c',
-  },
-  {
-    title: 'Shark Week - Great White Reign of Terror',
-    caption: '7 tracks from the INTENSITY album appear in this Discovery Channel feature.',
-    youtubeUrl: 'https://www.youtube.com/watch?v=8-gDJeb44rs',
   },
 ]
 
@@ -209,15 +171,24 @@ export default function Home() {
 
       <section className="py-8 md:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-white">Selected TV & Film Syncs</h2>
-            <p className="text-cinema-muted mt-2">Compositions placed across global television and film</p>
+          <div className="mb-6 flex items-baseline justify-between">
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold text-white">Selected TV & Film Syncs</h2>
+              <p className="text-cinema-muted mt-2">Compositions placed across global television and film</p>
+            </div>
+            <a
+              href="https://www.youtube.com/@bazzaboy99"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-sm text-cinema-muted hover:text-cinema-accent transition-colors whitespace-nowrap ml-4"
+            >
+              View All
+              <svg className="w-3.5 h-3.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
           </div>
-          <ScrollRail className="gap-4 pb-4">
-            {syncPlacements.map((sync) => (
-              <SyncCard key={sync.title} {...sync} />
-            ))}
-          </ScrollRail>
+          <SyncPlacementsRail />
         </div>
       </section>
 
