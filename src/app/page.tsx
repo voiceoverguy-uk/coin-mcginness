@@ -71,7 +71,7 @@ const syncPlacements = [
   },
 ]
 
-const credits = ['Netflix', 'BBC', 'Paramount', 'CNN', 'National Geographic', 'Channel 4']
+const credits = ['Netflix', 'BBC', 'Paramount', 'CNN', 'National Geographic', 'Channel 4', 'Disney', 'HBO']
 
 export default function Home() {
   return (
