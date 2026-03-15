@@ -22,6 +22,24 @@ export default function FilmPage() {
           {films.map((film) => (
             <div key={film.slug} className="flex-shrink-0 w-[160px] sm:w-[180px] md:w-[200px]">
               <FilmCard film={film} />
+              {film.soundcloudUrl && (
+                <a
+                  href={film.soundcloudUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-1.5 mt-2 px-3 py-1.5 text-xs text-cinema-muted hover:text-white transition-colors rounded-md border border-cinema-border hover:border-cinema-accent/50 bg-cinema-card/50"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="w-3.5 h-3.5"
+                    aria-hidden="true"
+                  >
+                    <path d="M11.56 8.87V17h8.76c1.85 0 3.35-1.672 3.35-3.5 0-1.836-1.487-3.5-3.35-3.5-.245 0-.488.027-.728.08C19.4 8.002 17.512 6.25 15.23 6.25c-.86 0-1.66.26-2.33.71-.2.14-.34.36-.34.6v1.31zm-1.3-.2V17h.5V8.18c-.18.14-.34.3-.5.49zM8.76 10.1V17h.5V9.63c-.19.14-.35.3-.5.47zM7.26 11.32V17h.5v-5.36c-.18.1-.34.23-.5.38l-.05-.02.05-.68zM5.76 12.5V17h.5v-4.5h-.5zM4.26 13V17h.5v-3.73c-.18.06-.34.16-.5.3V13zM2.76 13.72V17h.5v-3c-.18.08-.34.2-.5.37v.35zM1.26 14.38V17h.5v-2.34c-.18.1-.34.22-.5.38v.34zM0 15.25V17h.76v-1.75H0z" />
+                  </svg>
+                  SoundCloud
+                </a>
+              )}
             </div>
           ))}
         </div>

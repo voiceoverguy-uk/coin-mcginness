@@ -7,6 +7,7 @@ export interface Film {
   description: string
   type: string
   soundcloudEmbed?: string
+  soundcloudUrl?: string
 }
 
 export const films: Film[] = [
@@ -23,7 +24,8 @@ export const films: Film[] = [
     ],
     description: "Original score composed for this feature film. An award-winning production recognised at multiple international film festivals including Barcelona, Anatolia and Beyond the Curve.",
     type: "Feature Film",
-    soundcloudEmbed: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A1516240744&color=%231b242d&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true"
+    soundcloudEmbed: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A1516240744&color=%231b242d&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true",
+    soundcloudUrl: "https://on.soundcloud.com/PVaLCKYsQn5jrr71J4"
   },
   {
     slug: "sacrilege",
@@ -38,7 +40,8 @@ export const films: Film[] = [
       "/images/films/sacrilege-premiere2.jpg"
     ],
     description: "Original score composed for this feature film. Nominated for an RTS West of England Award for composition.",
-    type: "Feature Film"
+    type: "Feature Film",
+    soundcloudUrl: "https://on.soundcloud.com/ZZCbP0hQx68hNjYNdl"
   },
   {
     slug: "the-quantum-devil",
@@ -54,7 +57,8 @@ export const films: Film[] = [
       "/images/films/qd-actor-premeire.jpg"
     ],
     description: "Original score composed for this feature film. A sci-fi thriller exploring the boundaries of quantum physics and human consciousness.",
-    type: "Feature Film"
+    type: "Feature Film",
+    soundcloudUrl: "https://on.soundcloud.com/h1i1Zb1B80ZTtUDrD1"
   },
   {
     slug: "angels-tide",
@@ -65,7 +69,8 @@ export const films: Film[] = [
       "/images/films/angel-s-tide.jpg"
     ],
     description: "Original score composed for this feature film.",
-    type: "Feature Film"
+    type: "Feature Film",
+    soundcloudUrl: "https://on.soundcloud.com/fSdr7J0lq0rvBtz5FR"
   },
   {
     slug: "cash",
@@ -89,7 +94,8 @@ export const films: Film[] = [
     ],
     description: "Original score composed for this feature film. A dramatic exploration of society's hidden undercurrents.",
     type: "Feature Film",
-    soundcloudEmbed: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A1667688787&color=%231c1c1c&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true"
+    soundcloudEmbed: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A1667688787&color=%231c1c1c&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true",
+    soundcloudUrl: "https://on.soundcloud.com/6hSUGzBGSrfoc9fZUj"
   },
   {
     slug: "the-impact",
