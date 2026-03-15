@@ -55,15 +55,6 @@ export const awards: Award[] = [
     category: "Original Score"
   },
   {
-    image: "/images/awards/girl-next-award.jpg",
-    title: "Festival Award",
-    result: "Winner",
-    project: "Girl Next",
-    festival: "Film Festival",
-    year: "",
-    category: "Original Score"
-  },
-  {
     image: "/images/awards/girl-next-film-festival-2.jpg",
     title: "Festival Selection",
     result: "Official Selection",
