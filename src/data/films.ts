@@ -25,7 +25,7 @@ export const films: Film[] = [
     ],
     description: "Original score composed for this feature film. An award-winning production recognised at multiple international film festivals including Barcelona, Anatolia and Beyond the Curve.",
     type: "Feature Film",
-    soundcloudEmbed: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A1516240744&color=%231b242d&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true",
+    soundcloudEmbed: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A1516240744&color=%231d0c0b&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
     soundcloudUrl: "https://on.soundcloud.com/PVaLCKYsQn5jrr71J4",
     trailerUrl: "https://www.youtube.com/watch?v=nj5IAkSOe6k"
   },
@@ -43,6 +43,7 @@ export const films: Film[] = [
     ],
     description: "Original score composed for this feature film. Nominated for an RTS West of England Award for composition.",
     type: "Feature Film",
+    soundcloudEmbed: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2205712412&color=%231d0c0b&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
     soundcloudUrl: "https://on.soundcloud.com/ZZCbP0hQx68hNjYNdl",
     trailerUrl: "https://www.youtube.com/watch?v=PRGUPk2dAmc"
   },
@@ -61,6 +62,7 @@ export const films: Film[] = [
     ],
     description: "Original score composed for this feature film. A sci-fi thriller exploring the boundaries of quantum physics and human consciousness.",
     type: "Feature Film",
+    soundcloudEmbed: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2205688589&color=%231d0c0b&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
     soundcloudUrl: "https://on.soundcloud.com/h1i1Zb1B80ZTtUDrD1",
     trailerUrl: "https://www.youtube.com/watch?v=t4i1PSA2f88"
   },
@@ -74,6 +76,7 @@ export const films: Film[] = [
     ],
     description: "Original score composed for this feature film.",
     type: "Feature Film",
+    soundcloudEmbed: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2205698660&color=%231d0c0b&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
     soundcloudUrl: "https://on.soundcloud.com/fSdr7J0lq0rvBtz5FR",
     trailerUrl: "https://www.youtube.com/watch?v=-rl6PjlLM1A"
   },
@@ -99,7 +102,7 @@ export const films: Film[] = [
     ],
     description: "Original score composed for this feature film. A dramatic exploration of society's hidden undercurrents.",
     type: "Feature Film",
-    soundcloudEmbed: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A1667688787&color=%231c1c1c&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true",
+    soundcloudEmbed: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A1667688787&color=%231d0c0b&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
     soundcloudUrl: "https://on.soundcloud.com/6hSUGzBGSrfoc9fZUj",
     trailerUrl: "https://www.youtube.com/watch?v=izKziLTgqoM"
   },

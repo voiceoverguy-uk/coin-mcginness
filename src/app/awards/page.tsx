@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { wins, nominations, selections } from '@/data/awards'
-import { AwardCardLarge, AwardCardSmall } from '@/components/AwardCard'
+import { wins, nominations } from '@/data/awards'
+import { AwardCardLarge } from '@/components/AwardCard'
 
 export const metadata: Metadata = {
   title: 'Awards & Recognition - Colin McGinness | Composer',
@@ -37,17 +37,6 @@ export default function AwardsPage() {
                 <div key={i} className="flex-shrink-0 w-[260px] sm:w-[280px] md:w-[300px]">
                   <AwardCardLarge award={award} />
                 </div>
-              ))}
-            </div>
-          </section>
-        )}
-
-        {selections.length > 0 && (
-          <section className="mb-16">
-            <h2 className="text-xl md:text-2xl font-bold text-white mb-6">Festival Recognition</h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-              {selections.map((award, i) => (
-                <AwardCardSmall key={i} award={award} />
               ))}
             </div>
           </section>
