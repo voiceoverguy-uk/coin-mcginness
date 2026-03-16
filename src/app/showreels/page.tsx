@@ -15,7 +15,6 @@ const showreels = [
     title: 'Film Score Showreel',
     description: 'A showcase of original film scores composed for feature films and screen productions. This reel presents a selection of dramatic, atmospheric and action-driven compositions created for independent and commercial cinema.',
     youtubeId: 'I0fR1Z1G0fs',
-    customThumbnail: '/images/showreel-thumbnail.jpg',
   },
   {
     title: 'Trailer Syncs - Colin McGinness Showreel',
