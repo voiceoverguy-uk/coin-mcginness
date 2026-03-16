@@ -115,6 +115,7 @@ export const films: Film[] = [
       "/images/films/the-impact-2022.jpg"
     ],
     description: "Original score composed for this production.",
-    type: "Feature Film"
+    type: "Feature Film",
+    trailerUrl: "https://www.youtube.com/watch?v=BTZ-d53jyiw"
   }
 ]
