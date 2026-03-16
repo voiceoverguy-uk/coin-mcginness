@@ -17,24 +17,14 @@ const showreels = [
     youtubeId: 'I0fR1Z1G0fs',
   },
   {
-    title: 'Trailer Syncs - Colin McGinness Showreel',
-    description: 'A compilation of TV and film syncs that my compositions have appeared on. From high-energy trailer spots to dramatic promotional campaigns across global networks.',
-    youtubeId: 'xcPHE1P2RVI',
-  },
-  {
-    title: 'Animated Syncs - Colin McGinness Showreel',
-    description: 'A compilation of the animated shows and films that my music has appeared in. Covering a range of styles from playful to dramatic across international animated productions.',
-    youtubeId: '748HFAPqrwA',
+    title: 'Colin McGinness Showreel',
+    description: '',
+    youtubeId: 'wGsmoao33WU',
   },
   {
     title: 'Production Music Showreel',
     description: '',
     youtubeId: 'Cv-NxLHCNtc',
-  },
-  {
-    title: 'Colin McGinness Showreel',
-    description: '',
-    youtubeId: 'wGsmoao33WU',
   },
 ]
 
