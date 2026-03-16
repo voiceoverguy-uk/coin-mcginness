@@ -1,13 +1,14 @@
 import { ImageResponse } from 'next/og'
-import { readFileSync } from 'node:fs'
+import { readFile } from 'node:fs/promises'
 import { join } from 'node:path'
 
+export const runtime = 'nodejs'
 export const alt = 'Colin McGinness - Film & TV Composer'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
 export default async function Image() {
-  const imageBuffer = readFileSync(join(process.cwd(), 'public/images/hero-bg.jpg'))
+  const imageBuffer = await readFile(join(process.cwd(), 'public/images/hero-bg.jpg'))
   const base64 = imageBuffer.toString('base64')
   const dataUrl = `data:image/jpeg;base64,${base64}`
 
