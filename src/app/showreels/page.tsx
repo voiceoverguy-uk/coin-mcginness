@@ -27,9 +27,9 @@ const showreels = [
     youtubeId: '748HFAPqrwA',
   },
   {
-    title: 'Album Covers in Motion',
-    description: 'A compilation of the many production albums released over the years. Each album crafted for specific sync and placement needs across film, television and media.',
-    youtubeId: '-zMy-Q0ZUrQ',
+    title: 'Production Music Showreel',
+    description: '',
+    youtubeId: 'Cv-NxLHCNtc',
   },
 ]
 
@@ -51,18 +51,11 @@ export default function ShowreelsPage() {
 
         <div className="space-y-16">
           {showreels.map((reel) => (
-            <div key={reel.youtubeId} className="group">
-              <div className="relative rounded-xl overflow-hidden shadow-2xl shadow-black/50 border border-cinema-border">
-                <ShowreelPlayer
-                  youtubeId={reel.youtubeId}
-                  title={reel.title}
-                  customThumbnail={reel.customThumbnail}
-                />
-              </div>
-              <div className="mt-4">
-                <h2 className="text-xl md:text-2xl font-semibold text-white">{reel.title}</h2>
-                <p className="text-cinema-muted mt-2 leading-relaxed max-w-3xl">{reel.description}</p>
-              </div>
+            <div key={reel.youtubeId} className="relative rounded-xl overflow-hidden shadow-2xl shadow-black/50 border border-cinema-border">
+              <ShowreelPlayer
+                youtubeId={reel.youtubeId}
+                title={reel.title}
+              />
             </div>
           ))}
         </div>
