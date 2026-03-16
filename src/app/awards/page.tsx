@@ -12,8 +12,6 @@ export const metadata: Metadata = {
 }
 
 export default function AwardsPage() {
-  const combinedAwards = [...wins, ...nominations]
-
   return (
     <div className="pt-24 pb-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -29,11 +27,24 @@ export default function AwardsPage() {
           </p>
         </div>
 
-        {combinedAwards.length > 0 && (
+        {wins.length > 0 && (
           <section className="mb-16">
-            <h2 className="text-xl md:text-2xl font-bold text-white mb-6">AWARDS</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-white mb-6">Featured Wins</h2>
             <div className="flex gap-6 overflow-x-auto pb-4 scroll-rail">
-              {combinedAwards.map((award, i) => (
+              {wins.map((award, i) => (
+                <div key={i} className="flex-shrink-0 w-[260px] sm:w-[280px] md:w-[300px]">
+                  <AwardCardLarge award={award} />
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {nominations.length > 0 && (
+          <section className="mb-16">
+            <h2 className="text-xl md:text-2xl font-bold text-white mb-6">Nominations</h2>
+            <div className="flex gap-6 overflow-x-auto pb-4 scroll-rail">
+              {nominations.map((award, i) => (
                 <div key={i} className="flex-shrink-0 w-[260px] sm:w-[280px] md:w-[300px]">
                   <AwardCardLarge award={award} />
                 </div>
