@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://colinmcginness.com'),
   title: {
     default: 'Colin McGinness | Award-Winning Film & TV Composer',
-    template: '%s | Colin McGinness',
+    template: '%s | Colin McGinness Composer',
   },
   description: 'Award-winning composer creating original scores for feature films, television, trailers and global sync placements. 90+ production albums. Syncs on BBC, Disney, HBO and more.',
   openGraph: {
@@ -48,11 +48,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-cinema-dark text-white antialiased">
+      <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+      </head>
+      <body className="min-h-screen bg-cinema-dark text-white antialiased">
         <Navbar />
         <main>{children}</main>
         <Footer />
