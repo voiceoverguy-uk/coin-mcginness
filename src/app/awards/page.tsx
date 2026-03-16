@@ -3,11 +3,11 @@ import { wins, nominations } from '@/data/awards'
 import { AwardCardLarge } from '@/components/AwardCard'
 
 export const metadata: Metadata = {
-  title: 'Awards & Recognition - Colin McGinness | Composer',
-  description: 'Awards, nominations and festival recognition for composer Colin McGinness, including wins at Barcelona, Anatolia and Beyond the Curve International Film Festivals.',
+  title: 'Awards & Recognition',
+  description: 'Winner of Best Music in a Film at Barcelona IFF, Best Original Score at Beyond the Curve and Anatolia IFF. RTS West of England Award nominee for Sacrilege.',
   openGraph: {
-    title: 'Awards & Recognition - Colin McGinness | Composer',
-    description: 'Awards, nominations and festival recognition for composer Colin McGinness.',
+    title: 'Awards & Recognition | Colin McGinness Composer',
+    description: 'Winner of Best Music in a Film at Barcelona IFF, Best Original Score at Beyond the Curve and Anatolia IFF. RTS West of England Award nominee for Sacrilege.',
   },
 }
 

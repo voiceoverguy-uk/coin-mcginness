@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Contact - Colin McGinness | Composer',
-  description: 'Contact Colin McGinness for film scoring, trailer composition, production music and sync licensing enquiries.',
+  title: 'Contact',
+  description: 'Enquiries for film scoring, sync licensing and production music. Get in touch with composer Colin McGinness.',
   openGraph: {
-    title: 'Contact - Colin McGinness | Composer',
-    description: 'Contact Colin McGinness for film scoring, trailer composition, production music and sync licensing enquiries.',
+    title: 'Contact | Colin McGinness Composer',
+    description: 'Enquiries for film scoring, sync licensing and production music. Get in touch with composer Colin McGinness.',
   },
 }
 

@@ -3,11 +3,11 @@ import { films } from '@/data/films'
 import FilmCard from '@/components/FilmCard'
 
 export const metadata: Metadata = {
-  title: 'Film Composition - Colin McGinness | Composer',
-  description: 'Feature film scores composed by Colin McGinness. Original music for Girl Next, Sacrilege, The Quantum Devil, Angel\'s Tide, Cash, The Dark Side of Society and The Impact.',
+  title: 'Film Scores',
+  description: 'Original scores for Girl Next (3× festival winner), The Quantum Devil, Sacrilege, Angel\'s Tide and more. Composer for independent and commercial cinema.',
   openGraph: {
-    title: 'Film Composition - Colin McGinness | Composer',
-    description: 'Feature film scores composed by Colin McGinness.',
+    title: 'Film Scores | Colin McGinness Composer',
+    description: 'Original scores for Girl Next (3× festival winner), The Quantum Devil, Sacrilege, Angel\'s Tide and more. Composer for independent and commercial cinema.',
   },
 }
 
