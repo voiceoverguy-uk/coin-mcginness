@@ -31,6 +31,11 @@ const showreels = [
     description: '',
     youtubeId: 'Cv-NxLHCNtc',
   },
+  {
+    title: 'Colin McGinness Showreel',
+    description: '',
+    youtubeId: 'wGsmoao33WU',
+  },
 ]
 
 export default function ShowreelsPage() {
