@@ -62,7 +62,19 @@ export default function Home() {
                 A highly experienced composer with global TV, film and sync credits spanning more than two decades. Crafting cinematic scores, trailer-ready compositions and production music for the world&apos;s leading broadcasters and platforms.
               </p>
             </div>
-            <HeroShowreel />
+            <div className="order-1 lg:order-2">
+              <div className="relative rounded-xl overflow-hidden shadow-2xl shadow-black/50 border border-cinema-border">
+                <div className="aspect-video">
+                  <iframe
+                    src="https://www.youtube.com/embed/I0fR1Z1G0fs?rel=0"
+                    title="Colin McGinness - Film Score Showreel"
+                    className="w-full h-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+            </div>
           </div>
           <div className="mt-32 pt-12 border-t border-cinema-border">
             <div className="flex items-center justify-center gap-8 md:gap-16 flex-wrap">
@@ -82,15 +94,7 @@ export default function Home() {
       <section className="py-8 md:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="rounded-xl overflow-hidden bg-cinema-card">
-              <iframe
-                src="https://www.youtube.com/embed/I0fR1Z1G0fs"
-                title="Colin McGinness - Film Score Showreel"
-                className="w-full aspect-video"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
+            <HeroShowreel />
             <div className="rounded-xl overflow-hidden bg-cinema-card">
               <iframe
                 src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A238048467&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
