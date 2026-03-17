@@ -11,7 +11,7 @@ interface SyncCardProps {
 }
 
 function getYouTubeId(url: string): string {
-  const match = url.match(/(?:v=|\/embed\/|\/watch\?v=)([a-zA-Z0-9_-]{11})/)
+  const match = url.match(/(?:v=|\/embed\/|\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/)
   return match ? match[1] : ''
 }
 

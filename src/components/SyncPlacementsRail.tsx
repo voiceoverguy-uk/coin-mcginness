@@ -69,6 +69,90 @@ const syncPlacements: SyncPlacement[] = [
     youtubeUrl: 'https://www.youtube.com/watch?v=8-gDJeb44rs',
     musicHref: 'https://hrvst.co/wh/gegzw',
   },
+  {
+    title: 'Snowflake Mountain',
+    caption: 'Music featured in the Netflix reality series.',
+    youtubeUrl: 'https://youtu.be/e7t_Syn48Ic',
+    musicHref: 'https://w.bmg.com/gehvu',
+  },
+  {
+    title: 'Bar Rescue',
+    caption: 'Music featured in Bar Rescue.',
+    youtubeUrl: 'https://youtu.be/1DsZbHoNIWA',
+    musicHref: 'https://w.bmg.com/gehvw',
+  },
+  {
+    title: 'Hunted',
+    caption: 'Music featured in Hunted.',
+    youtubeUrl: 'https://youtu.be/UlvOJfpZVnI',
+    musicHref: 'https://w.bmg.com/gehvz',
+  },
+  {
+    title: 'Celebrity Apprentice',
+    caption: 'Music featured in Celebrity Apprentice.',
+    youtubeUrl: 'https://youtu.be/g5VX2f6mBjg',
+    musicHref: 'https://w.bmg.com/gehv2',
+  },
+  {
+    title: 'Secrets of the Supercars',
+    caption: 'Music featured in Secrets of the Supercars.',
+    youtubeUrl: 'https://youtu.be/eLkC3nlXK60',
+    musicHref: 'https://w.bmg.com/gehv3',
+  },
+  {
+    title: 'Commando',
+    caption: 'Music featured in Commando.',
+    youtubeUrl: 'https://youtu.be/ilpIZP_PYf8',
+    musicHref: 'https://w.bmg.com/gehz7',
+  },
+  {
+    title: 'Last Woman on Earth',
+    caption: 'Music featured in Last Woman on Earth.',
+    youtubeUrl: 'https://youtu.be/vVWsOo4No_I',
+    musicHref: 'https://w.bmg.com/gehz4',
+  },
+  {
+    title: 'Yellowstone',
+    caption: 'Music featured in Yellowstone.',
+    youtubeUrl: 'https://youtu.be/sGvkJV8Uooc',
+    musicHref: 'https://w.bmg.com/gcetw',
+  },
+  {
+    title: 'Nancy Drew',
+    caption: 'Music featured in Nancy Drew.',
+    youtubeUrl: 'https://youtu.be/vyws4xB7ko8',
+    musicHref: 'https://links.universalproductionmusic.com/voo2ea',
+  },
+  {
+    title: 'Welcome to Murdertown',
+    caption: 'Music featured in Welcome to Murdertown.',
+    youtubeUrl: 'https://youtu.be/CwZxmoOTZp0',
+    musicHref: 'https://links.universalproductionmusic.com/ej6h89',
+  },
+  {
+    title: 'Miracle Workers',
+    caption: 'Music featured in Miracle Workers.',
+    youtubeUrl: 'https://youtu.be/yxGqgQtxSmI',
+    musicHref: 'https://w.bmg.com/geh0s',
+  },
+  {
+    title: 'Nothing Lasts Forever',
+    caption: 'Music featured in Nothing Lasts Forever.',
+    youtubeUrl: 'https://youtu.be/v38y_cpoKXQ',
+    musicHref: 'https://w.bmg.com/geh0o',
+  },
+  {
+    title: 'Web of Make Believe',
+    caption: 'Music featured in Web of Make Believe.',
+    youtubeUrl: 'https://youtu.be/zaTy2F5YYOY',
+    musicHref: 'https://w.bmg.com/geh0p',
+  },
+  {
+    title: 'Next Level Chef',
+    caption: 'Music featured in Next Level Chef.',
+    youtubeUrl: 'https://youtu.be/FOTN3D_mwFw',
+    musicHref: 'https://w.bmg.com/geh0t',
+  },
 ]
 
 export default function SyncPlacementsRail() {
