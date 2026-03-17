@@ -94,6 +94,7 @@ export default function Home() {
       <section className="py-8 md:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <HeroShowreel />
             <div className="rounded-xl overflow-hidden bg-cinema-card">
               <iframe
                 src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A238048467&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
@@ -103,7 +104,6 @@ export default function Home() {
                 allow="autoplay"
               />
             </div>
-            <HeroShowreel />
           </div>
         </div>
       </section>
