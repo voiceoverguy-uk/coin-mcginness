@@ -26,6 +26,16 @@ const showreels = [
     description: '',
     youtubeId: 'Cv-NxLHCNtc',
   },
+  {
+    title: 'Animated Syncs',
+    description: '',
+    youtubeId: '748HFAPqrwA',
+  },
+  {
+    title: 'Trailer Syncs',
+    description: '',
+    youtubeId: 'xcPHE1P2RVI',
+  },
 ]
 
 export default function ShowreelsPage() {

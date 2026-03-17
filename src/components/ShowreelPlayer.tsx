@@ -25,7 +25,7 @@ export default function ShowreelPlayer({ youtubeId, title, customThumbnail }: Sh
     )
   }
 
-  const thumbnailSrc = customThumbnail || `https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg`
+  const thumbnailSrc = customThumbnail || `https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg`
 
   return (
     <button
@@ -41,7 +41,7 @@ export default function ShowreelPlayer({ youtubeId, title, customThumbnail }: Sh
         onError={(e) => {
           if (!customThumbnail) {
             const target = e.target as HTMLImageElement
-            target.src = `https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg`
+            target.src = `https://img.youtube.com/vi/${youtubeId}/mqdefault.jpg`
           }
         }}
       />
