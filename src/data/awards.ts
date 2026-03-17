@@ -37,6 +37,15 @@ export const awards: Award[] = [
     category: "Best Original Score"
   },
   {
+    image: "/images/awards/qd2-london-movie-awards.jpg",
+    title: "London Movie Awards",
+    result: "Winner",
+    project: "The Quantum Devil",
+    festival: "London Movie Awards",
+    year: "2023",
+    category: "Gold: Original Song & Silver: Original Score"
+  },
+  {
     image: "/images/awards/rts.jpg",
     title: "RTS West of England Awards",
     result: "Nominee",
