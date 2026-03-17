@@ -25,7 +25,7 @@ export default function HeroShowreel() {
               aria-label="Play Film Score Showreel"
             >
               <img
-                src="/images/showreel-thumbnail.jpg"
+                src="https://img.youtube.com/vi/I0fR1Z1G0fs/hqdefault.jpg"
                 alt="Film Score Showreel - Colin McGinness"
                 className="w-full h-full object-cover"
               />
