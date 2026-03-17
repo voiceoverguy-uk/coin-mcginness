@@ -1,46 +1,65 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+
+const IMAGES = Array.from({ length: 25 }, (_, i) => `/images/hero-carousel/${i + 1}.jpg`)
 
 export default function HeroShowreel() {
-  const [playing, setPlaying] = useState(false)
+  const [current, setCurrent] = useState(0)
+  const [prev, setPrev] = useState<number | null>(null)
+  const [fading, setFading] = useState(false)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPrev(current)
+      setFading(true)
+      setCurrent(c => (c + 1) % IMAGES.length)
+      setTimeout(() => {
+        setPrev(null)
+        setFading(false)
+      }, 1000)
+    }, 5000)
+    return () => clearInterval(interval)
+  }, [current])
 
   return (
     <div className="order-1 lg:order-2" id="showreel">
-      <div className="relative rounded-xl overflow-hidden shadow-2xl shadow-black/50 border border-cinema-border">
-        <div className="aspect-video">
-          {playing ? (
-            <iframe
-              src="https://www.youtube.com/embed/I0fR1Z1G0fs?autoplay=1&rel=0"
-              className="w-full h-full"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              title="Colin McGinness - Film Score Showreel"
-            />
-          ) : (
+      <div className="relative rounded-xl overflow-hidden shadow-2xl shadow-black/50 border border-cinema-border aspect-video">
+        {prev !== null && (
+          <img
+            key={`prev-${prev}`}
+            src={IMAGES[prev]}
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ opacity: fading ? 0 : 1, transition: 'opacity 1s ease-in-out' }}
+          />
+        )}
+        {IMAGES.map((src, i) => (
+          <img
+            key={src}
+            src={src}
+            alt={`Colin McGinness composer collage ${i + 1}`}
+            loading={i === 0 ? 'eager' : 'lazy'}
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{
+              opacity: i === current ? 1 : 0,
+              transition: i === current ? 'opacity 1s ease-in-out' : 'none',
+              zIndex: i === current ? 1 : 0,
+            }}
+          />
+        ))}
+        <div className="absolute inset-0 z-10 pointer-events-none" style={{ background: 'linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.3) 100%)' }} />
+        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex gap-1.5">
+          {IMAGES.map((_, i) => (
             <button
-              type="button"
-              className="relative w-full h-full group cursor-pointer"
-              onClick={() => setPlaying(true)}
-              aria-label="Play Film Score Showreel"
-            >
-              <img
-                src="https://img.youtube.com/vi/I0fR1Z1G0fs/hqdefault.jpg"
-                alt="Film Score Showreel - Colin McGinness"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300" />
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-transform duration-300 group-hover:scale-110">
-                <svg viewBox="0 0 68 48" className="w-[68px] h-[48px]" aria-hidden="true">
-                  <path
-                    d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.64 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z"
-                    fill="#FF0000"
-                  />
-                  <path d="M45 24L27 14v20" fill="white" />
-                </svg>
-              </div>
-            </button>
-          )}
+              key={i}
+              onClick={() => setCurrent(i)}
+              aria-label={`Go to image ${i + 1}`}
+              className="w-1.5 h-1.5 rounded-full transition-all duration-300"
+              style={{ background: i === current ? '#ffffff' : 'rgba(255,255,255,0.35)' }}
+            />
+          ))}
         </div>
       </div>
     </div>
