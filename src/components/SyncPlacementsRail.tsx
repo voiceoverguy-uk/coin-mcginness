@@ -22,6 +22,12 @@ function shuffle<T>(arr: T[]): T[] {
 
 const syncPlacements: SyncPlacement[] = [
   {
+    title: 'Formula 1',
+    caption: 'Music featured in Formula 1 coverage.',
+    youtubeUrl: 'https://www.youtube.com/watch?v=ElQ6a4eefS0',
+    musicHref: 'https://w.bmg.com/gegkn',
+  },
+  {
     title: 'Joe Wicks: Licensed to Kill',
     caption: 'Track "Global Surveillance" appears in this Channel 4 documentary.',
     youtubeUrl: 'https://www.youtube.com/watch?v=U_QRcQPDnNQ',
