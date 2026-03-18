@@ -12,6 +12,8 @@ export const metadata: Metadata = {
 }
 
 export default function FilmPage() {
+  const filmsWithSoundcloud = films.filter(f => f.soundcloudEmbed)
+
   return (
     <div className="pt-24 pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -53,6 +55,44 @@ export default function FilmPage() {
             </div>
           ))}
         </div>
+
+        {filmsWithSoundcloud.length > 0 && (
+          <div className="mt-16">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">Film Soundtracks</h2>
+            <p className="text-cinema-muted mb-8">Listen to original film scores composed by Colin McGinness</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {filmsWithSoundcloud.map((film) => (
+                <div
+                  key={film.slug}
+                  className="rounded-xl bg-cinema-card border border-cinema-border overflow-hidden"
+                >
+                  <div className="flex items-center gap-4 p-4 pb-0">
+                    <img
+                      src={film.poster}
+                      alt={film.title}
+                      className="w-16 h-24 object-cover rounded-lg flex-shrink-0"
+                    />
+                    <div>
+                      <h3 className="text-white font-bold text-lg">{film.title}</h3>
+                      <p className="text-cinema-muted text-sm mt-1">Original Soundtrack</p>
+                    </div>
+                  </div>
+                  <div className="p-4">
+                    <iframe
+                      width="100%"
+                      height="300"
+                      scrolling="no"
+                      frameBorder="no"
+                      allow="autoplay"
+                      src={film.soundcloudEmbed}
+                      className="rounded-lg"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   )
