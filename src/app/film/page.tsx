@@ -5,6 +5,7 @@ import FilmCard from '@/components/FilmCard'
 export const metadata: Metadata = {
   title: 'Film Scores',
   description: 'Original scores for Girl Next (3× festival winner), The Quantum Devil, Sacrilege, Angel\'s Tide and more. Composer for independent and commercial cinema.',
+  alternates: { canonical: 'https://colinmcginness.com/film' },
   openGraph: {
     title: 'Film Scores | Colin McGinness Composer',
     description: 'Original scores for Girl Next (3× festival winner), The Quantum Devil, Sacrilege, Angel\'s Tide and more. Composer for independent and commercial cinema.',

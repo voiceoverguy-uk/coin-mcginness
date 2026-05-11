@@ -4,6 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: { absolute: 'About | Colin McGinness Film & TV Composer' },
   description: 'Colin McGinness is a film and television composer with 90+ production album credits and sync placements across BBC, Disney, HBO, National Geographic and global broadcasters.',
+  alternates: { canonical: 'https://colinmcginness.com/about' },
   openGraph: {
     title: 'About | Colin McGinness Film & TV Composer',
     description: 'Colin McGinness is a film and television composer with 90+ production album credits and sync placements across BBC, Disney, HBO, National Geographic and global broadcasters.',

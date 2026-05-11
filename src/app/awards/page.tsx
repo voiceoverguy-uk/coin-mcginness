@@ -7,6 +7,7 @@ const allAwards = [...wins, ...nominations]
 export const metadata: Metadata = {
   title: 'Awards & Recognition',
   description: 'Winner of Best Music in a Film at Barcelona IFF, Best Original Score at Beyond the Curve and Anatolia IFF. RTS West of England Award nominee for Sacrilege.',
+  alternates: { canonical: 'https://colinmcginness.com/awards' },
   openGraph: {
     title: 'Awards & Recognition | Colin McGinness Composer',
     description: 'Winner of Best Music in a Film at Barcelona IFF, Best Original Score at Beyond the Curve and Anatolia IFF. RTS West of England Award nominee for Sacrilege.',

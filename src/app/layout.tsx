@@ -21,6 +21,9 @@ export const metadata: Metadata = {
     title: 'Colin McGinness | Award-Winning Film & TV Composer',
     description: 'Award-winning composer creating original scores for feature films, television, trailers and global sync placements. 90+ production albums. Syncs on BBC, Disney, HBO and more.',
   },
+  alternates: {
+    canonical: 'https://colinmcginness.com',
+  },
   robots: {
     index: true,
     follow: true,

@@ -4,6 +4,7 @@ import ShowreelPlayer from '@/components/ShowreelPlayer'
 export const metadata: Metadata = {
   title: 'Showreels',
   description: 'Watch film score showreels, trailer sync compilations and production music reels from award-winning composer Colin McGinness.',
+  alternates: { canonical: 'https://colinmcginness.com/showreels' },
   openGraph: {
     title: 'Showreels | Colin McGinness Composer',
     description: 'Watch film score showreels, trailer sync compilations and production music reels from award-winning composer Colin McGinness.',
