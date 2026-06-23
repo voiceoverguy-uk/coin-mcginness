@@ -32,4 +32,6 @@ export const trailerSyncs: TrailerSync[] = [
   { src: "/images/trailer-syncs/dexter-resurrection.jpg", alt: "Dexter: Resurrection", title: "Dexter: Resurrection" },
   { src: "/images/trailer-syncs/the-late-show-with-stephen-colbert.jpg", alt: "The Late Show with Stephen Colbert", title: "The Late Show with Stephen Colbert" },
   { src: "/images/trailer-syncs/the-walking-dead-daryl-dixon.jpg", alt: "The Walking Dead: Daryl Dixon", title: "The Walking Dead: Daryl Dixon" },
+  { src: "/images/trailer-syncs/dune-part-2.webp", alt: "Dune Part Two", title: "Dune Part Two" },
+  { src: "/images/trailer-syncs/court-of-gold.webp", alt: "Court of Gold", title: "Court of Gold" },
 ]
