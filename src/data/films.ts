@@ -64,7 +64,7 @@ export const films: Film[] = [
     type: "Feature Film",
     soundcloudEmbed: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2205688589&color=%231d0c0b&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
     soundcloudUrl: "https://on.soundcloud.com/h1i1Zb1B80ZTtUDrD1",
-    trailerUrl: "https://www.youtube.com/watch?v=t4i1PSA2f88"
+    trailerUrl: "https://www.youtube.com/watch?v=wWHKOmIUOBM"
   },
   {
     slug: "angels-tide",
@@ -78,7 +78,7 @@ export const films: Film[] = [
     type: "Feature Film",
     soundcloudEmbed: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2205698660&color=%231d0c0b&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
     soundcloudUrl: "https://on.soundcloud.com/fSdr7J0lq0rvBtz5FR",
-    trailerUrl: "https://www.youtube.com/watch?v=-rl6PjlLM1A"
+    trailerUrl: "https://www.youtube.com/watch?v=2Pq482axRyA"
   },
   {
     slug: "cash",
