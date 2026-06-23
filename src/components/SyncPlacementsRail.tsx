@@ -153,6 +153,24 @@ const syncPlacements: SyncPlacement[] = [
     youtubeUrl: 'https://youtu.be/FOTN3D_mwFw',
     musicHref: 'https://w.bmg.com/geh0t',
   },
+  {
+    title: 'Deadly 60',
+    caption: '',
+    youtubeUrl: 'https://www.youtube.com/watch?v=f28gdCJGu5A',
+    musicHref: 'https://w.bmg.com/ge99y',
+  },
+  {
+    title: 'Masterchef',
+    caption: '',
+    youtubeUrl: 'https://www.youtube.com/watch?v=weqqMpMUXr0',
+    musicHref: 'https://w.bmg.com/getgh',
+  },
+  {
+    title: 'Dune Part 2',
+    caption: '',
+    youtubeUrl: 'https://www.youtube.com/watch?v=6CU1qfpR1Ns',
+    musicHref: 'https://w.bmg.com/ge4p5',
+  },
 ]
 
 export default function SyncPlacementsRail() {
