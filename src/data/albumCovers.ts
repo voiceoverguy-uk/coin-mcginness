@@ -33,7 +33,7 @@ export const albumCovers: AlbumCover[] = [
   { src: "/images/album-covers/crunch-time.png", alt: "Album cover - Crunch Time", title: "Crunch Time", href: "https://www.beatsbakery.com/albums/bak040" },
   { src: "/images/album-covers/ctt103-immense-wooshes-cover.jpg", alt: "Album cover - Immense Wooshes", title: "Immense Wooshes", href: "https://w.bmg.com/f8y1p" },
   { src: "/images/album-covers/ctt107-menacing-atmospheres-cover.jpg", alt: "Album cover - Menacing Atmospheres", title: "Menacing Atmospheres", href: "https://w.bmg.com/gegk0" },
-  { src: "/images/album-covers/ctt108-horror-cover.jpg", alt: "Album cover - Horror", title: "Horror", href: "https://w.bmg.com/gegk1" },
+  { src: "/images/album-covers/ctt108-horror-cover.jpg", alt: "Album cover - Horror Stories", title: "Horror Stories", href: "https://www.universalproductionmusic.com/en-row/discover/albums/20319/horror-stories#id-1241812" },
   { src: "/images/album-covers/dark-trailers.jpg", alt: "Album cover - Dark Trailers", title: "Dark Trailers", href: "https://w.bmg.com/f9g5b" },
   { src: "/images/album-covers/deep.jpg", alt: "Album cover - Deep Thought", title: "Deep Thought", href: "https://w.bmg.com/gegjs" },
   { src: "/images/album-covers/delicate-nature.jpg", alt: "Album cover - Delicate Nature", title: "Delicate Nature", href: "https://www.beatsbakery.com/tracks?tracks=bak075-1" },
