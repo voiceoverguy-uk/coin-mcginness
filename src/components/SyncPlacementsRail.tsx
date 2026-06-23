@@ -121,13 +121,13 @@ const syncPlacements: SyncPlacement[] = [
     title: 'Nancy Drew',
     caption: 'Music featured in Nancy Drew.',
     youtubeUrl: 'https://youtu.be/vyws4xB7ko8',
-    musicHref: 'https://links.universalproductionmusic.com/voo2ea',
+    musicHref: 'https://www.universalproductionmusic.com/en-row/discover/albums/20319/horror-stories#id-1241813',
   },
   {
     title: 'Welcome to Murdertown',
     caption: 'Music featured in Welcome to Murdertown.',
     youtubeUrl: 'https://youtu.be/CwZxmoOTZp0',
-    musicHref: 'https://links.universalproductionmusic.com/ej6h89',
+    musicHref: 'https://links.universalproductionmusic.com/4lho5c',
   },
   {
     title: 'Miracle Workers',
